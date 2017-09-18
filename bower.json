@@ -1,0 +1,48 @@
+{
+    "name": "warframe-caddy",
+    "version": "0.01.1",
+    "homepage": "",
+    "description": "An inventory management application for the Warframe game.",
+    "authors": [
+        {
+            "name": "Andre G. Bowlin",
+            "email": "agbowlin@gmail.com",
+            "homepage": "http://liquicode.com"
+        }
+    ],
+    "main": "server/server.js",
+    "license": "MIT",
+    "private": true,
+    "repository": {
+
+    },
+    "keywords": [
+
+    ],
+    "files": [
+        "package.json",
+        "LICENSE",
+        "VERSION",
+        "README.md",
+        "server/*",
+        "client/*"
+    ],
+    "ignore": [
+        ".*",
+        "data/",
+        "members/*",
+        "admin/_logs/",
+        "admin/node_modules/",
+        "admin/tennodrops.data/",
+        "admin/warframe.wikia.data/",
+        "client/node_modules/",
+        "client/bower_components/",
+        "server/node_modules/"
+    ],
+    "dependencies": {
+
+    },
+    "devDependencies": {
+
+    }
+}

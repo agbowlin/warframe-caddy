@@ -25,7 +25,7 @@ var npm_string = require('string');
 var NodeJS_Address = process.env.IP || "0.0.0.0";
 var NodeJS_Port = process.env.PORT || 3000;
 
-var ClientFolder = npm_path.resolve(__dirname, 'client');
+var ClientFolder = npm_path.resolve(__dirname, '../client');
 // var ProjectsFolder = npm_path.resolve(__dirname, 'projects');
 // var ItemsFolder = npm_path.resolve(__dirname, 'Items');
 
@@ -56,6 +56,7 @@ if (process.argv.length > 2) {
 
 var ExpressRouter = npm_express();
 
+/*
 // Define a static route for serving warframe.market icon files.
 ExpressRouter.get('/icons/*',
 	function(Request, Response, Next) {
@@ -97,6 +98,7 @@ ExpressRouter.get('/icons/*',
 		}
 		Next();
 	});
+*/
 
 
 // Define a static route for serving the client application files.

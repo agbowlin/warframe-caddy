@@ -1,0 +1,9 @@
+data/
+members/*
+admin/_logs/
+admin/node_modules/
+admin/tennodrops.data/
+admin/warframe.wikia.data/
+client/node_modules/
+client/bower_components/
+server/node_modules/
