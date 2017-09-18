@@ -1,0 +1,8 @@
+{
+	"name": "warframe-caddy-admin",
+	"dependencies": {
+		"jquery": "",
+		"liquicode_dev_common": "",
+		"liqui-logger": ""
+	}
+}

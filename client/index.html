@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!--
+		==========================================
+			Page Metadata
+		==========================================
+		-->
+
+	<title>My Warframe</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="/css/bootstrap-responsive.min.css">-->
+
+	<!-- Foundation CSS framework (Bootstrap and jQueryUI also supported) -->
+	<!--<link rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css'>-->
+	<!-- Font Awesome icons (Bootstrap, Foundation, and jQueryUI also supported) -->
+	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
+
+	<link href="site.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="MyWarframeApp">
+
+	<div class="container" ng-controller="MainController">
+
+
+		<!--
+		==========================================
+			Page Navigation Bar
+		==========================================
+		-->
+
+		<nav class="navbar navbar-fixed-top navbar-default">
+			<div class="container-fluid">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<!--<img alt="Brand" src="...">-->
+						My Warframe
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav pull-right">
+					<l1>
+						<button type="button" class="btn btn-default navbar-btn pull-right" ng-click="show_help_modal()">
+							Help
+						</button>
+					</l1>
+				</ul>
+
+
+				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+					<l1>
+						<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="do_member_logout()">
+							Logout
+						</button>
+					</l1>
+				</ul>
+
+
+				<ul class="nav navbar-nav pull-right" ng-hide="(member_name != null)" ng-cloak>
+					<l1>
+						<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="show_member_login_modal()">
+							Login
+						</button>
+					</l1>
+				</ul>
+
+				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+					<p class="navbar-text">
+						[ {{ member_name }} ]
+					</p>
+				</ul>
+
+			</div>
+		</nav>
+
+
+		<!--
+		==========================================
+		==========================================
+
+			Page Content
+
+		==========================================
+		==========================================
+		-->
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<a href="gear.html" class="btn btn-primary main-button">
+					<img src="images/warframes.png">
+					<h3>Gear</h3>
+					<p>Warframe, Weapons, etc</p>
+				</a>
+
+				<a href="mods.html" class="btn btn-primary main-button">
+					<img src="images/mods.png">
+					<h3>Mods</h3>
+					<p>Mods, Mods, Mods</p>
+				</a>
+
+				<a href="relics.html" class="btn btn-primary main-button">
+					<img src="images/mods.png">
+					<h3>Relics</h3>
+					<p>Void Relics</p>
+				</a>
+
+				<a href="parts.html" class="btn btn-primary main-button">
+					<img src="images/all-items.png">
+					<h3>Parts</h3>
+					<p>Gear Parts</p>
+				</a>
+
+				<!--<a href="admin.html" class="btn btn-primary main-button" ng-hide="!(member_data.is_admin == true)">-->
+				<!--	<img class="" width="200px" src="images/admin.png">-->
+				<!--	<h3 class="">Admin</h3>-->
+				<!--	<p class="">Admin Functions</p>-->
+				<!--</a>-->
+
+			</div>
+			<div class="row" ng-hide="!worldstate" ng-cloak>
+
+				<h4>Worldstate</h4>
+
+				<div class="col-sm-4">
+					<table class="item-list-table">
+						<tr>
+							<th>Time</th>
+							<td>
+								<div ng-hide="!worldstate.earthCycle.isDay" ng-cloak>
+									Daytime for {{ worldstate.earthCycle.timeLeft }}
+								</div>
+								<div ng-hide="worldstate.earthCycle.isDay" ng-cloak>
+									Nighttime for {{ worldstate.earthCycle.timeLeft }}
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>Darvo</th>
+							<td>
+								{{ worldstate.dailyDeals[0].item }} (exp: {{ worldstate.dailyDeals[0].eta }})
+								<br>On sale for {{ worldstate.dailyDeals[0].salePrice }}p (original: {{ worldstate.dailyDeals[0].originalPrice }}p)
+								<br>Sold {{ worldstate.dailyDeals[0].sold }} / {{ worldstate.dailyDeals[0].total }}
+							</td>
+						</tr>
+						<tr>
+							<th>Baro Ki'Teer</th>
+							<td>
+								{{ worldstate.voidTrader.location }}
+								<div ng_hide="worldstate.voidTrader.active">
+									Coming in {{ worldstate.voidTrader.startString }}
+								</div>
+								<div ng_hide="!worldstate.voidTrader.active">
+									Leaving in {{ worldstate.voidTrader.endString }}
+									<ul>
+										<li ng-repeat="item in worldstate.voidTrader.inventory">
+											{{ item.name }}
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="col-sm-4">
+					<table class="item-list-table">
+						<tr>
+							<th>Alerts</th>
+						</tr>
+						<tr ng-repeat="alert in worldstate.alerts">
+							<td>
+								<div class="alert-container">
+									<strong>{{ alert.mission.type }}</strong> (exp: {{ alert.eta }})
+									<br> {{ alert.mission.node }}, {{ alert.mission.faction }} ({{ alert.mission.minEnemyLevel }}-{{ alert.mission.maxEnemyLevel }})
+									<br> {{ alert.mission.reward.asString }}
+									<div ng-hide="!alert.mission.archwingRequired">Archwing</div>
+									<div ng-hide="!alert.mission.nightmare">Nightmare</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="col-sm-4">
+					<table class="item-list-table">
+						<tr>
+							<th>Fissures</th>
+						</tr>
+						<tr ng-repeat="fissure in worldstate.fissures">
+							<td>
+								<div class="alert-container">
+									<strong>{{ fissure.missionType }}</strong> (exp: {{ fissure.eta }})
+									<br> {{ fissure.node }}, {{ fissure.enemy }}
+									<br> {{ fissure.tier }}
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!--
+		==========================================
+		==========================================
+
+			Member Login Window
+
+		==========================================
+		==========================================
+		-->
+
+		<div id="member_login_modal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<div class="modal-body">
+
+						<div class="form-group">
+							<label class="" for="member_name">Member Name</label>
+							<input class="form-control" ng-model="member_name" id="ui_member_name" type="text">
+						</div>
+
+						<div class="form-group">
+							<label class="" for="member_email">Email Address</label>
+							<input class="form-control" ng-model="member_email" id="ui_member_email" type="text">
+						</div>
+
+						<div class="form-group">
+							<label class="" for="member_password">Password</label>
+							<input class="form-control" ng-model="member_password" id="ui_member_password" type="password">
+						</div>
+
+						<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="do_member_signup()">
+							Signup
+						</button>
+
+						<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="do_member_login()">
+							Login
+						</button>
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<!--
+		==========================================
+		==========================================
+
+			Help Window
+
+		==========================================
+		==========================================
+		-->
+
+		<div id="help_modal" class="modal fade" role="dialog" tabindex='-1'>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">My Warframe Help</h2>
+					</div>
+
+					<div id="help_text" class="modal-body">
+
+						My Warframe is an inventory management application for the Warframe game.
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!--
+		==========================================
+			Page Errors
+		==========================================
+		-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--<hr ng-cloak>-->
+				<!--<h5 ng-cloak>{{ notice }}</h5>-->
+				<ul ng-cloak>
+					<li ng-repeat="error in errors" ng-bind="error">
+					</li>
+				</ul>
+				<!--<hr ng-cloak>-->
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+
+<!--
+		==========================================
+			Javascript Library Includes
+		==========================================
+		-->
+
+<script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+
+<script src="/index.js"></script>
+
+
+<script>
+	/* global app */
+
+	// Add modal window activator functions.
+	app.run(function($rootScope) {
+
+		//==========================================
+		$rootScope.show_member_login_modal = function show_member_login_modal() {
+			$('#member_login_modal').modal('show');
+			return;
+		}
+
+
+		//==========================================
+		$rootScope.show_help_modal = function show_help_modal() {
+			$('#help_modal').modal('show');
+			return;
+		}
+
+	});
+</script>
+
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!--
+		==========================================
+			Page Metadata
+		==========================================
+		-->
+
+	<title>My Warframe :: Mods</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="/css/bootstrap-responsive.min.css">-->
+
+	<!-- Foundation CSS framework (Bootstrap and jQueryUI also supported) -->
+	<!--<link rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css'>-->
+	<!-- Font Awesome icons (Bootstrap, Foundation, and jQueryUI also supported) -->
+	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
+
+	<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+
+	<link href="site.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="MyWarframeApp">
+
+	<div class="container" ng-controller="GearController">
+
+
+		<!--
+		==========================================
+			Page Navigation Bar
+		==========================================
+		-->
+
+		<nav class="navbar navbar-fixed-top navbar-default">
+			<div class="container-fluid">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<!--<img alt="Brand" src="...">-->
+						My Warframe
+					</a>
+				</div>
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="">
+						> Mods
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+					<p class="navbar-text">
+						[ {{ member_name }} ]
+					</p>
+				</ul>
+
+			</div>
+		</nav>
+
+
+		<!--
+		==========================================
+		==========================================
+
+			Page Content
+
+		==========================================
+		==========================================
+		-->
+
+		<div class="container-fluid" ng-cloak>
+
+			<div class="row">
+
+				<h3>Mods</h3>
+				<table id="mods_list" class="item-list-table" width="100%">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Source</th>
+							<th>Rarity</th>
+							<th>Applies</th>
+							<th>Description</th>
+							<th>Transmutability</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in mods_list">
+							<td>{{ item.mod_name }}</td>
+							<td>{{ item.mod_source }}</td>
+							<td>{{ item.mod_rarity }}</td>
+							<td>{{ item.mod_applies_to }}</td>
+							<td>{{ item.mod_description }}</td>
+							<td>{{ item.mod_transmutability }}</td>
+							<td>{{ member_data.items[item.name].notes }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+
+
+		<!--
+		==========================================
+		==========================================
+
+			Item View Window
+
+		==========================================
+		==========================================
+		-->
+
+		<div id="item_view_modal" class="modal fade" role="dialog" tabindex='-1'>
+			<div class="modal-dialog modal-lg">
+
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title item-name">{{ current_item_name }}</h2>
+					</div>
+
+					<div class="modal-body">
+						<table width="100%">
+							<tr>
+								<th>Owned</th>
+								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_owned"></td>
+							</tr>
+							<tr>
+								<th>Level</th>
+								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_level"></td>
+							</tr>
+							<tr>
+								<th>Notes</th>
+								<td><textarea rows="3" class="form-control" ng-model="member_data.items[current_item_name].notes"></textarea></td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" ng-click="put_member_data_request()" data-dismiss="modal">Save</button>
+						<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<!--
+		==========================================
+			Page Errors
+		==========================================
+		-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--<hr ng-cloak>-->
+				<!--<h5 ng-cloak>{{ notice }}</h5>-->
+				<ul ng-cloak>
+					<li ng-repeat="error in errors" ng-bind="error">
+					</li>
+				</ul>
+				<!--<hr ng-cloak>-->
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+
+<!--
+		==========================================
+			Javascript Library Includes
+		==========================================
+		-->
+
+<script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script src="/mods.js"></script>
+
+
+<script>
+	/* global $ */
+	/* global module */
+
+	// Add modal window activator functions.
+	module.run(function($rootScope) {
+
+		//==========================================
+		$rootScope.show_item_view_modal = function show_item_view_modal() {
+			$('#item_view_modal').modal('show');
+			return;
+		};
+
+	});
+</script>
+
+</html>

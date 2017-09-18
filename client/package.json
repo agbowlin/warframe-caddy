@@ -1,0 +1,8 @@
+{
+	"name": "warframe-caddy-client",
+	"dependencies":
+	{
+		"socket.io-client": ""
+	}
+
+}
