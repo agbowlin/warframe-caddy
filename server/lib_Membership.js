@@ -10,8 +10,7 @@ var npm_sanitize = require('sanitize-filename');
 module.exports = Lib;
 
 
-function Lib()
-{
+function Lib() {
 	return;
 }
 
@@ -21,22 +20,20 @@ Lib.RootFolder = '../members';
 
 
 //---------------------------------------------------------------------
-Lib.GetMemberFolder =
-	function GetMemberFolder(MemberName)
-	{
-		var folder_name = npm_sanitize(MemberName);
-		var member_folder = npm_path.join(Lib.RootFolder, folder_name);
-		return member_folder;
+Lib.GetMemberFilename =
+	function GetMemberFilename(MemberName) {
+		var member_name = npm_sanitize(MemberName);
+		var member_filename = npm_path.join(Lib.RootFolder, member_name);
+		member_filename += '.json';
+		return member_filename;
 	};
 
 
 //---------------------------------------------------------------------
 Lib.IsMember =
-	function IsMember(MemberName)
-	{
-		var member_folder = Lib.GetMemberFolder(MemberName);
-		if (npm_fs.existsSync(member_folder))
-		{
+	function IsMember(MemberName) {
+		var member_filename = Lib.GetMemberFilename(MemberName);
+		if (npm_fs.existsSync(member_filename)) {
 			return true;
 		}
 		return false;
@@ -45,26 +42,22 @@ Lib.IsMember =
 
 //---------------------------------------------------------------------
 Lib.NewMember =
-	function NewMember(MemberName, MemberEmail, MemberPassword)
-	{
+	function NewMember(MemberName, MemberEmail, MemberPassword) {
 		// Create the Member Folder.
 		// Fail if the folder already exists.
-		var member_folder = Lib.GetMemberFolder(MemberName);
-		if (npm_fs.existsSync(member_folder))
-		{
+		var member_filename = Lib.GetMemberFilename(MemberName);
+		if (npm_fs.existsSync(member_filename)) {
 			return false;
 		}
-		npm_fs.mkdirSync(member_folder);
-		
+
 		// Generate a new Member Data object.
 		var member_data = {};
 		member_data.member_name = MemberName;
 		member_data.member_email = MemberEmail;
 		member_data.member_password = MemberPassword;
-		
+
 		// Write the Member Data object.
-		var member_data_filename = npm_path.join(member_folder, 'data.json');
-		npm_fs.writeFileSync(member_data_filename, JSON.stringify(member_data, null, 4));
+		npm_fs.writeFileSync(member_filename, JSON.stringify(member_data, null, 4));
 
 		return member_data;
 	};
@@ -72,19 +65,16 @@ Lib.NewMember =
 
 //---------------------------------------------------------------------
 Lib.GetMemberData =
-	function GetMemberData(MemberName)
-	{
+	function GetMemberData(MemberName) {
 		// Find the Member Folder.
 		// Fail if the folder doesn't exist.
-		var member_folder = Lib.GetMemberFolder(MemberName);
-		if (!npm_fs.existsSync(member_folder))
-		{
+		var member_filename = Lib.GetMemberFilename(MemberName);
+		if (!npm_fs.existsSync(member_filename)) {
 			return false;
 		}
 
 		// Read the Member Data object.
-		var member_data_filename = npm_path.join(member_folder, 'data.json');
-		var member_data_content = npm_fs.readFileSync(member_data_filename);
+		var member_data_content = npm_fs.readFileSync(member_filename);
 		var member_data = JSON.parse(member_data_content);
 
 		// Return the Member Data object.
@@ -94,21 +84,16 @@ Lib.GetMemberData =
 
 //---------------------------------------------------------------------
 Lib.PutMemberData =
-	function PutMemberData(MemberData)
-	{
+	function PutMemberData(MemberData) {
 		// Find the Member Folder.
 		// Fail if the folder doesn't exist.
-		var member_folder = Lib.GetMemberFolder(MemberData.member_name);
-		if (!npm_fs.existsSync(member_folder))
-		{
+		var member_filename = Lib.GetMemberFilename(MemberData.member_name);
+		if (!npm_fs.existsSync(member_filename)) {
 			return false;
 		}
 
 		// Write the Member Data object.
-		var member_data_filename = npm_path.join(member_folder, 'data.json');
-		npm_fs.writeFileSync(member_data_filename, JSON.stringify(MemberData, null, 4));
+		npm_fs.writeFileSync(member_filename, JSON.stringify(MemberData, null, 4));
 
 		return true;
 	};
-
-

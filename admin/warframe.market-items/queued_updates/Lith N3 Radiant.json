@@ -1,0 +1,28 @@
+{
+    "_id": "5936dd6916efa3a742b15f4a",
+    "tags": [
+        "void relic"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "lith_n3_radiant",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Lith N3 Radiant",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

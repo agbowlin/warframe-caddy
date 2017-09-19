@@ -1,0 +1,28 @@
+{
+    "_id": "5936dcea16efa3a742b15f3f",
+    "tags": [
+        "void relic"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "meso_n4_intact",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Meso N4 Intact",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

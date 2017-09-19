@@ -1,0 +1,29 @@
+{
+    "_id": "588c7a51c353473a172364f4",
+    "tags": [
+        "set",
+        "secondary"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "aklex_prime_set",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Aklex Prime Set",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

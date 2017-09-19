@@ -1,0 +1,28 @@
+{
+    "_id": "584802f315f1a99e894d9bd5",
+    "tags": [
+        "void relic"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "axi_e1_intact",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Axi E1 Intact",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

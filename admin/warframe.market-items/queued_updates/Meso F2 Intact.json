@@ -1,0 +1,28 @@
+{
+    "_id": "584802e615f1a99e894d9bcd",
+    "tags": [
+        "void relic"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "meso_f2_intact",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Meso F2 Intact",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

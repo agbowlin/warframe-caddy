@@ -1,0 +1,28 @@
+{
+    "_id": "5936dde816efa3a742b15f51",
+    "tags": [
+        "void relic"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "neo_n6_flawless",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Neo N6 Flawless",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

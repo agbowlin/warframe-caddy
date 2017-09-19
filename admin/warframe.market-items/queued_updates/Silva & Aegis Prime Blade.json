@@ -1,0 +1,29 @@
+{
+    "_id": "592dd262011e88f094afec8a",
+    "tags": [
+        "blueprint",
+        "melee"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "silva_and_aegis_prime_blade",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Silva & Aegis Prime Blade",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

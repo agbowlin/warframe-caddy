@@ -1,0 +1,29 @@
+{
+    "_id": "588c7923c353473a172364f3",
+    "tags": [
+        "blueprint",
+        "secondary"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "aklex_prime_link",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Aklex Prime Link",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

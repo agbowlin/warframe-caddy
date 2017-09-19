@@ -1,0 +1,29 @@
+{
+    "_id": "58f0efdfaa4b70452a173076",
+    "tags": [
+        "blueprint",
+        "melee"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "orvius_disc",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Orvius Disc",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

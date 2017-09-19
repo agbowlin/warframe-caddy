@@ -1,0 +1,36 @@
+{
+    "_id": "56fdbd5d2e26966de716e432",
+    "tags": [
+        "blueprint",
+        "hilt"
+    ],
+    "icon": "icons/en/War_Set.bd2b5f2c8f6adfd4c1295afe513b5de2.png",
+    "thumb": "icons/en/thumbs/War_Set.bd2b5f2c8f6adfd4c1295afe513b5de2.128x128.png",
+    "icon_format": "land",
+    "url_name": "war_hilt",
+    "tradable": true,
+    "part_of_set": [
+        "582b0eb80af25410a4931616",
+        "56fdbd6c2e26966de716e433",
+        "56fdbd5d2e26966de716e432",
+        "56dac5905cc639de0a45c522",
+        "54a74455e779892d5e5156e4",
+        "54a74454e779892d5e5155a7"
+    ],
+    "set_root": false,
+    "en": {
+        "drop": [],
+        "item_name": "War Hilt",
+        "description": "<p>War is a heavy sword used by Shadow Stalker, given to him by the Sentient Hunhow during the events of the Second Dream Quest.</p>",
+        "wiki_link": "http://warframe.wikia.com/wiki/War",
+        "codex": "The Stalker's sword as bestowed to him by the Sentient Hunhow."
+    },
+    "ru": {
+        "drop": [],
+        "description": "<p>Война - меч Сталкера, что был дарован ему Владеющим Разумом Хунхау.</p>",
+        "wiki_link": "http://ru.warframe.wikia.com/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_(%D0%BE%D1%80%D1%83%D0%B6%D0%B8%D0%B5)",
+        "item_name": "Война (оружие)"
+    },
+    "mastery_level": 10,
+    "trading_tax": 2000
+}

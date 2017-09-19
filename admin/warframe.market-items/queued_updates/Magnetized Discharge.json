@@ -1,0 +1,29 @@
+{
+    "_id": "59385f6716efa3a742b15f5f",
+    "tags": [
+        "mod",
+        "mag"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "magnetized_discharge",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Magnetized Discharge",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": "Rare",
+    "mod_max_rank": 3,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

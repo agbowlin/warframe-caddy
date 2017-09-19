@@ -1,6 +1,6 @@
 {
     "name": "warframe-caddy",
-    "version": "0.01.2",
+    "version": "0.01.3",
     "homepage": "",
     "description": "An inventory management application for the Warframe game.",
     "authors": [
@@ -24,6 +24,7 @@
         "LICENSE",
         "VERSION",
         "README.md",
+        "admin/*",
         "server/*",
         "client/*"
     ],
@@ -34,6 +35,7 @@
         "admin/_logs/",
         "admin/node_modules/",
         "admin/tennodrops.data/",
+        "admin/warframe.market-items/",
         "admin/warframe.wikia.data/",
         "client/node_modules/",
         "client/bower_components/",

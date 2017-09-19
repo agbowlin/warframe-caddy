@@ -1,0 +1,29 @@
+{
+    "_id": "587a15c8c13d58ede882322b",
+    "tags": [
+        "mod",
+        "sentinel"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "primed_regen",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Primed Regen",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": "Legendary",
+    "mod_max_rank": 10,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

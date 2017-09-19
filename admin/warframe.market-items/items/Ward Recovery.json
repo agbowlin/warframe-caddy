@@ -1,0 +1,48 @@
+{
+    "_id": "56dac5905cc639de0a45c522",
+    "tags": [
+        "mod",
+        "rare"
+    ],
+    "icon": "icons/en/War_Set.bd2b5f2c8f6adfd4c1295afe513b5de2.png",
+    "thumb": "icons/en/thumbs/War_Set.bd2b5f2c8f6adfd4c1295afe513b5de2.128x128.png",
+    "icon_format": "port",
+    "url_name": "ward_recovery",
+    "tradable": true,
+    "part_of_set": [
+        "582b0eb80af25410a4931616",
+        "56fdbd6c2e26966de716e433",
+        "56fdbd5d2e26966de716e432",
+        "56dac5905cc639de0a45c522",
+        "54a74455e779892d5e5156e4",
+        "54a74454e779892d5e5155a7"
+    ],
+    "set_root": false,
+    "en": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Conclave Offering"
+            }
+        ],
+        "item_name": "Ward Recovery",
+        "description": "<p>Ward Recovery is a Warframe Augment Mod for Nezha's Warding Halo in PvP that recovers some of the energy used to cast it, based on how much protection is left. </p>",
+        "wiki_link": "http://warframe.wikia.com/wiki/Ward_Recovery"
+    },
+    "ru": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Conclave Offering"
+            }
+        ],
+        "item_name": "Оберегающее восстановление",
+        "thumb": "icons/ru/thumbs/Ward_Recovery.12b7856c5a01a4bdf24c3e556018b914.128x128.png",
+        "icon": "icons/ru/Ward_Recovery.12b7856c5a01a4bdf24c3e556018b914.png",
+        "description": "<p>Оберегающее восстановление — мод-аугмент для варфрейма Нэчжа в режиме конклава, улучшающий его способность оберегающее гало. После применения способности, каждое применение способности будет стоить меньше на определённый процент, в зависимости от оставшейся защиты.</p>",
+        "wiki_link": "http://ru.warframe.wikia.com/wiki/%D0%9E%D0%B1%D0%B5%D1%80%D0%B5%D0%B3%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    "rarity": "rare",
+    "mod_max_rank": 3,
+    "trading_tax": 8000
+}

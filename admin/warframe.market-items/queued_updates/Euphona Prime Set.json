@@ -1,0 +1,29 @@
+{
+    "_id": "58b57068eb26db5c31192113",
+    "tags": [
+        "set",
+        "shotgun"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "euphona_prime_set",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Euphona Prime Set",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

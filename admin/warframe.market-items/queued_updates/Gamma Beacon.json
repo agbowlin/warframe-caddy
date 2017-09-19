@@ -1,0 +1,29 @@
+{
+    "_id": "598b06b4ab6b61be6fec0fb3",
+    "tags": [
+        "beacon",
+        "collectible"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "gamma_beacon",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Gamma Beacon",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

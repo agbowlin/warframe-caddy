@@ -1,0 +1,28 @@
+{
+    "_id": "58e6407ada6e257f670cf06b",
+    "tags": [
+        "scene"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "color_key",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Color Key",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

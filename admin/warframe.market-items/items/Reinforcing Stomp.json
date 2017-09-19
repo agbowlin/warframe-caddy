@@ -1,0 +1,47 @@
+{
+    "_id": "58446fd52c2ada006a40630c",
+    "tags": [
+        "mod",
+        "warframe",
+        "rare",
+        "rhino"
+    ],
+    "icon": "icons/en/Reinforcing_Stomp.0437d19bb098f84f2f1b91bc00bae7f5.png",
+    "thumb": "icons/en/thumbs/Reinforcing_Stomp.0437d19bb098f84f2f1b91bc00bae7f5.128x128.png",
+    "icon_format": "port",
+    "url_name": "reinforcing_stomp",
+    "tradable": true,
+    "en": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Steel Meridian"
+            },
+            {
+                "link": null,
+                "name": "The Perrin Sequence"
+            }
+        ],
+        "wiki_link": "http://warframe.wikia.com/wiki/Reinforcing_Stomp",
+        "description": "<p>Reinforcing Stomp is a Warframe Augment Mod for Rhino that replenishes Iron Skin's health for each enemy affected by Rhino Stomp.</p>",
+        "item_name": "Reinforcing Stomp"
+    },
+    "ru": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Steel Meridian"
+            },
+            {
+                "link": null,
+                "name": "The Perrin Sequence"
+            }
+        ],
+        "wiki_link": "http://ru.warframe.wikia.com/wiki/Укрепляющий_Топот",
+        "description": "<p>Железная Кожа восстанавливается по 80 прочности за каждого задетого врага.</p>",
+        "item_name": "Укрепляющий Топот"
+    },
+    "rarity": "rare",
+    "mod_max_rank": 3,
+    "trading_tax": 8000
+}

@@ -1,0 +1,29 @@
+{
+    "_id": "592dd262011e88f094afec87",
+    "tags": [
+        "blueprint",
+        "melee"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "silva_and_aegis_prime_blueprint",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Silva & Aegis Prime Blueprint",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

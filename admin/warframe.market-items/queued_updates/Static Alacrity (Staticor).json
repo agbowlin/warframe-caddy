@@ -1,0 +1,28 @@
+{
+    "_id": "56dac5bc5cc639de0a45c52a",
+    "tags": [
+        "mod"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "static_alacrity_(staticor)",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Static Alacrity (Staticor)",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": 5,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

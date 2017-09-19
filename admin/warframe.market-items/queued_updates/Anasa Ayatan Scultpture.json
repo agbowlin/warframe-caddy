@@ -1,0 +1,29 @@
+{
+    "_id": "588a789c3cf52c408a2f88dd",
+    "tags": [
+        "ayatan",
+        "sculpture"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "anasa_ayatan_scultpture",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Anasa Ayatan Scultpture",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": 4,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

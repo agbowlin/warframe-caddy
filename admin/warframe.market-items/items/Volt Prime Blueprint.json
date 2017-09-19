@@ -1,0 +1,55 @@
+{
+    "_id": "55244820e779890907ef6805",
+    "tags": [
+        "blueprint",
+        "prime",
+        "warframe"
+    ],
+    "icon": "icons/en/Volt_Prime_Set.9481daa3eb02aaec1108cdbeeaeea159.png",
+    "thumb": "icons/en/thumbs/Volt_Prime_Set.9481daa3eb02aaec1108cdbeeaeea159.128x128.png",
+    "icon_format": "port",
+    "sub_icon": "sub_icons/blueprint_128x128.png",
+    "url_name": "volt_prime_blueprint",
+    "tradable": true,
+    "part_of_set": [
+        "56783f24cbfa8f0432dd89b2",
+        "55244820e779890907ef6805",
+        "55158cd9e7798915ee6bd13f",
+        "55158cd0e7798915e9d64c1e",
+        "55158ce0e7798915f4c95b78"
+    ],
+    "set_root": false,
+    "en": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Neo V1 Uncommon"
+            },
+            {
+                "link": null,
+                "name": "Axi N3 Uncommon"
+            }
+        ],
+        "codex": "A glorious warrior from the past, Volt Prime features the same abilities as Volt, but with unique mod polarities for greater customization.",
+        "description": "<p>Release Date: March 24th, 2015</p><p>Volt Prime is the primed variant of the Volt Warframe featuring more powerful stats: possessing a higher energy capacity and armor, as well as an additional  polarity.</p>",
+        "wiki_link": "http://warframe.wikia.com/wiki/Volt/Prime",
+        "item_name": "Volt Prime Blueprint"
+    },
+    "ru": {
+        "drop": [
+            {
+                "link": null,
+                "name": "Neo V1 Uncommon"
+            },
+            {
+                "link": null,
+                "name": "Axi N3 Uncommon"
+            }
+        ],
+        "description": "<p>Вольт создаёт и контролирует электричество. Этот костюм имеет сильные боевые способности, он идеально подходит для тех, кто ищет альтернативу огнестрельному оружию.</p>",
+        "wiki_link": "http://ru.warframe.wikia.com/wiki/%D0%92%D0%BE%D0%BB%D1%8C%D1%82",
+        "item_name": "Вольт Чертеж"
+    },
+    "ducats": 45,
+    "trading_tax": 4000
+}

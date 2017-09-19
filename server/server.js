@@ -223,41 +223,52 @@ SocketIo.on('connection',
 			function(ItemType) {
 				var response = {};
 				try {
-					response.item_type = ItemType;
-					ItemType = ItemType.toLowerCase();
-					var file_content = '';
-					if (ItemType == 'warframe') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/warframes.json');
-					}
-					else if (ItemType == 'primary weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-primary.json');
-					}
-					else if (ItemType == 'secondary weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-secondary.json');
-					}
-					else if (ItemType == 'melee weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-melee.json');
-					}
-					else if (ItemType == 'archwing primary weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-primary.json');
-					}
-					else if (ItemType == 'archwing melee weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-melee.json');
-					}
-					else if (ItemType == 'sentinel weapon') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-sentinel.json');
-					}
-					else if (ItemType == 'void relic') {
-						file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/void-relics.json');
-					}
-					else if (ItemType == 'gear part') {
-						file_content = npm_fs.readFileSync('../admin/tennodrops.data/parts.json');
-					}
-					else if (ItemType == 'mod') {
-						file_content = npm_fs.readFileSync('../admin/tennodrops.data/mods.json');
-					}
 
-					response.data = JSON.parse(file_content);
+					// response.item_type = ItemType;
+					// ItemType = ItemType.toLowerCase();
+					// var file_content = '';
+					// if (ItemType == 'warframe') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/warframes.json');
+					// }
+					// else if (ItemType == 'primary weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-primary.json');
+					// }
+					// else if (ItemType == 'secondary weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-secondary.json');
+					// }
+					// else if (ItemType == 'melee weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-melee.json');
+					// }
+					// else if (ItemType == 'archwing primary weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-primary.json');
+					// }
+					// else if (ItemType == 'archwing melee weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-melee.json');
+					// }
+					// else if (ItemType == 'sentinel weapon') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-sentinel.json');
+					// }
+					// else if (ItemType == 'void relic') {
+					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/void-relics.json');
+					// }
+					// else if (ItemType == 'gear part') {
+					// 	file_content = npm_fs.readFileSync('../admin/tennodrops.data/parts.json');
+					// }
+					// else if (ItemType == 'mod') {
+					// 	file_content = npm_fs.readFileSync('../admin/tennodrops.data/mods.json');
+					// }
+					// response.data = JSON.parse(file_content);
+
+					var items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-data.json'));
+					var selected_items = [];
+					items.forEach(item => {
+						if (item.item_type == ItemType) {
+							selected_items.push(item);
+						}
+					});
+
+					response.item_type = ItemType;
+					response.data = selected_items;
 					Socket.emit('list_items_response', response);
 				}
 				catch (err) {

@@ -1,0 +1,1677 @@
+data/items/Follow Through.json.i
+data/items/Synoid Simulor.json.i
+data/items/Lex Prime Receiver.json.i
+data/items/Axi T1 Exceptional.json.i
+data/items/Lethal Momentum.json.i
+data/items/Vauban Prime Neuroptics.json.i
+data/items/Sniper Ammo Mutation.json.i
+data/items/Hikou Prime Blueprint.json.i
+data/items/Dakra Prime Blueprint.json.i
+data/items/Cutting Edge.json.i
+data/items/Lith A1 Exceptional.json.i
+data/items/Guardian.json.i
+data/queued_updates/Neo B3 Intact.json.i
+data/items/Axi V2 Intact.json.i
+data/updates/HealingReturn.json.i
+data/items/Constitution.json.i
+data/items/Scimitar Engines.json.i
+data/items/Neo S1 Exceptional.json.i
+data/queued_updates/Gorgon Wraith Barrel.json.i
+data/queued_updates/Axi B1 Intact.json.i
+data/items/Fragor Prime Head.json.i
+data/items/Neo N1 Flawless.json.i
+data/items/Saryn Prime Systems.json.i
+data/items/Enduring Affliction.json.i
+data/items/Rakta Dark Dagger.json.i
+data/updates/IcyAvalanche.json.i
+data/sub_icons/string_128x128.png.i
+data/items/Burning Wasp.json.i
+data/items/Static Alacrity (Staticor).json.i
+data/items/Nightwatch Napalm.json.i
+data/items/Capacitance.json.i
+data/queued_updates/Neo V2 Radiant.json.i
+data/items/Spira Prime Set.json.i
+data/queued_updates/Vulkar Wraith.json.i
+data/items/Axi V1 Radiant.json.i
+data/queued_updates/Lith N2 Radiant.json.i
+data/items/Thermite Rounds.json.i
+data/queued_updates/Lith S3 Intact.json.i
+data/items/Steady Hands.json.i
+data/items/Reflex Draw.json.i
+data/queued_updates/Lith K1 Flawless.json.i
+data/queued_updates/Axi R1 Radiant.json.i
+data/items/Arcane Grace.json.i
+data/items/Accelerated Blast.json.i
+data/items/Venka Prime Gauntlet.json.i
+data/queued_updates/Bane of Corrupted.json.i
+data/items/Rhino Prime Set.json.i
+data/items/Antimatter Mine.json.i
+data/queued_updates/Neo T1 Radiant.json.i
+data/items/Flechette.json.i
+data/items/Cernos Prime Upper Limb.json.i
+data/items/Mind Freak.json.i
+data/queued_updates/Neo V5 Radiant.json.i
+data/items/Bronco Prime Receiver.json.i
+data/items/Dead Eye.json.i
+data/items/Chaos Sphere.json.i
+data/queued_updates/Lith K1 Intact.json.i
+data/items/Primed Reach.json.i
+data/queued_updates/Lith N3 Exceptional.json.i
+data/items/Calculated Victory.json.i
+data/items/Eagle Eye.json.i
+data/queued_updates/Neo V4 Intact.json.i
+data/items/Scimitar Fuselage.json.i
+data/items/Whirlwind.json.i
+data/items/Efficient Transferral.json.i
+data/items/Meso N2 Radiant.json.i
+data/items/Creeping Bullseye.json.i
+data/items/Spira Prime Blade.json.i
+data/items/Blind Shot.json.i
+data/items/Flow.json.i
+data/items/Rakta Cernos.json.i
+data/items/Vanguard Rhino Helmet.json.i
+data/items/Prisma Veritux.json.i
+data/items/Prisma Gorgon.json.i
+data/queued_updates/Cyclone Kraken.json.i
+data/items/Latron Prime Blueprint.json.i
+data/items/Molten Impact.json.i
+data/items/Sudden Justice.json.i
+data/queued_updates/Piercing Navigator.json.i
+data/items/Primed Fury.json.i
+data/items/Karak Wraith Set.json.i
+data/items/Undying Will.json.i
+data/items/Adept Surge.json.i
+data/items/Trinity Prime Chassis.json.i
+data/items/Cleanse Corpus.json.i
+data/items/Flash Accelerant.json.i
+data/items/Meso V2 Radiant.json.i
+data/items/Mantis Fuselage.json.i
+data/items/Lith F1 Flawless.json.i
+data/items/Slip Magazine.json.i
+data/items/Fanged Fusillade.json.i
+data/items/Axi S1 Flawless.json.i
+data/items/Neo V1 Flawless.json.i
+data/items/Serrated Rounds.json.i
+data/items/Burston Prime Set.json.i
+data/items/Sprint Boost.json.i
+data/items/Rathbone Head.json.i
+data/items/Sicarus Prime Receiver.json.i
+data/items/Meso N2 Exceptional.json.i
+data/queued_updates/Neo S6 Intact.json.i
+data/items/Gaia's Tragedy.json.i
+data/items/Galatine Prime Handle.json.i
+data/items/Axi A1 Radiant.json.i
+data/items/Furious Javelin.json.i
+data/queued_updates/Meso S4 Intact.json.i
+data/queued_updates/Axi B2 Exceptional.json.i
+data/items/Bo Prime Blueprint.json.i
+data/items/Cleanse Infested.json.i
+data/assimilate.json.i
+data/items/Vacuum.json.i
+data/items/Anti-Flak Plating.json.i
+data/items/Fast Hands.json.i
+data/queued_updates/Lith S6 Radiant.json.i
+data/items/Saryn Prime Blueprint.json.i
+data/items/Lasting Purity.json.i
+data/queued_updates/Axi V3 Exceptional.json.i
+data/items/Power Throw.json.i
+data/items/Gauss Mag Helmet.json.i
+data/items/Shrapnel Shot.json.i
+data/items/Argon Plating.json.i
+data/items/Prism Guard.json.i
+data/items/Blade of Truth.json.i
+data/items/Vicious Spread.json.i
+data/items/Bladed Rounds.json.i
+data/updates/Cernos.json.i
+data/items/Axi V1 Exceptional.json.i
+data/items/Axi V4 Radiant.json.i
+data/items/Neo S2 Exceptional.json.i
+data/items/Axi A1 Exceptional.json.i
+data/items/Bite.json.i
+data/items/Catalyzer Link.json.i
+data/items/Pressurized Magazine.json.i
+data/items/Corrosive Projection.json.i
+data/items/Enhanced Durability.json.i
+data/items/Quasar Drill.json.i
+data/queued_updates/Neo A1 Flawless.json.i
+data/items/Link Armor.json.i
+data/queued_updates/Silva & Aegis Prime Blueprint.json.i
+data/queued_updates/Axi V4 Flawless.json.i
+data/queued_updates/Axi E2 Flawless.json.i
+data/items/EMP Aura.json.i
+data/items/Ash Prime Systems.json.i
+data/items/Valkyr Prime Systems.json.i
+data/items/Paris Prime Upper Limb.json.i
+data/items/Repeater Clip.json.i
+data/items/Ore Gaze.json.i
+data/items/Rising Storm.json.i
+data/updates/CorrodingBarrage.json.i
+data/items/Meso V3 Exceptional.json.i
+data/items/Squall Frost Helmet.json.i
+data/updates/RelicsFrostEmber.json.i
+data/queued_updates/Euphona Prime Barrel.json.i
+data/queued_updates/Lith N1 Exceptional.json.i
+data/items/Venom Dose.json.i
+data/queued_updates/Chromatic Blade.json.i
+data/queued_updates/Arbiter's Tribunal Scene.json.i
+data/items/Nova Prime Neuroptics.json.i
+data/queued_updates/Silva & Aegis Prime Set.json.i
+data/items/Spira Prime Pouch.json.i
+data/items/Pool of Life.json.i
+data/items/Narrow Barrel.json.i
+data/items/Velocitus Barrel.json.i
+data/items/Neo S3 Exceptional.json.i
+data/queued_updates/Primed Bane of Corrupted.json.i
+data/items/Stinging Truth.json.i
+data/items/Nezha Set.json.i
+data/queued_updates/Valana Ayatan Sculpture.json.i
+data/items/Meso N1 Intact.json.i
+data/items/Contagion Cloud.json.i
+data/items/Chilling Grasp.json.i
+data/items/Axi V2 Exceptional.json.i
+data/items/Akbronco Prime Set.json.i
+data/queued_updates/Helios Prime Set.json.i
+data/items/Scindo Prime Blueprint.json.i
+data/items/Neo N2 Radiant.json.i
+data/items/Phaedra Receiver.json.i
+data/items/Razor Munitions.json.i
+data/items/Rhino Prime Systems.json.i
+data/items/Magazine Warp.json.i
+data/queued_updates/Axi O1 Radiant.json.i
+data/updates/DrainingGloom.json.i
+data/items/Fluctus Set.json.i
+data/queued_updates/Meso C2 Intact.json.i
+data/queued_updates/Axi R1 Intact.json.i
+data/items/Nova Prime Blueprint.json.i
+data/items/Steel Meridian Augment Mod.json.i
+data/items/Tempered Blade.json.i
+data/items/Afterburner.json.i
+data/items/Nezha Chassis Blueprint.json.i
+data/items/Resonance.json.i
+data/items/Burston Prime Receiver.json.i
+data/items/Shock Trooper.json.i
+data/queued_updates/Hunhow's Datascape Scene.json.i
+data/items/Pack Leader.json.i
+data/items/Stunning Speed.json.i
+data/items/Axi A1 Flawless.json.i
+data/queued_updates/Axi V4 Intact.json.i
+data/queued_updates/Gamma Beacon.json.i
+data/items/Vauban Prime Blueprint.json.i
+data/items/Paris Prime Blueprint.json.i
+data/queued_updates/Brain Storm (Grakata).json.i
+data/items/Neo N4 Exceptional.json.i
+data/items/Phaedra Stock.json.i
+data/items/Mantis Avionics.json.i
+data/items/Apex Predator.json.i
+data/items/Lex Prime Barrel.json.i
+data/items/Piercing Roar.json.i
+data/queued_updates/Avenging Truth.json.i
+data/items/Sinister Reach.json.i
+data/items/Shattering Justice.json.i
+data/items/Ash Prime Neuroptics.json.i
+data/items/Vile Acceleration.json.i
+data/items/Meso D1 Exceptional.json.i
+data/items/Loki Prime Blueprint.json.i
+data/items/Diamond Skin.json.i
+data/items/Reverb Banshee Helmet.json.i
+data/items/Vengeful Revenant.json.i
+data/items/Tactical Pump.json.i
+data/items/Rending Crane.json.i
+data/items/Akstiletto Prime Blueprint.json.i
+data/items/Soaring Strike.json.i
+data/items/Loki Prime Set.json.i
+data/sub_icons/wings_128x128.png.i
+data/items/Pistol Pestilence.json.i
+data/queued_updates/Meso S4 Flawless.json.i
+data/items/Nano-Applicator.json.i
+data/items/Primed Heated Charge.json.i
+data/items/Pilfering Swarm.json.i
+data/queued_updates/Helios Prime Systems.json.i
+data/items/Arcane Momentum.json.i
+data/items/Arcane Guardian.json.i
+data/items/Sancti Magistar.json.i
+data/items/Boar Prime Receiver.json.i
+data/items/Blazing Steel.json.i
+data/items/Flame Repellent.json.i
+data/items/Ward Recovery.json.i
+data/queued_updates/Lith B1 Flawless.json.i
+data/items/Lethal Torrent.json.i
+data/items/Mag Prime Chassis.json.i
+data/items/Dispatch Overdrive.json.i
+data/queued_updates/Omega Beacon.json.i
+data/items/Boar Prime Stock.json.i
+data/items/Neo N3 Radiant.json.i
+data/items/Antimatter Absorb.json.i
+data/items/Astral Twilight.json.i
+data/items/Calculated Shot.json.i
+data/items/Firestorm.json.i
+data/queued_updates/Meso S5 Exceptional.json.i
+data/items/Arcane Phantasm.json.i
+data/items/Energy Conversion.json.i
+data/items/Resonating Quake.json.i
+data/queued_updates/Meso N3 Intact.json.i
+data/items/Charged Shell.json.i
+data/items/Vauban Prime Chassis.json.i
+data/items/Hall of Malevolence.json.i
+data/items/Neo D1 Radiant.json.i
+data/items/Fragor Prime Handle.json.i
+data/items/Latron Wraith Stock.json.i
+data/items/Disruptor.json.i
+data/queued_updates/Meso M1 Intact.json.i
+data/items/Melee Prowess.json.i
+data/items/Neo S3 Intact.json.i
+data/items/Berserker.json.i
+data/items/Wraith Twin Vipers Set.json.i
+data/items/Meso V2 Intact.json.i
+data/items/Dera Vandal Stock.json.i
+data/items/Wyrm Prime Cerebrum.json.i
+data/items/Frostbite.json.i
+data/items/Twitch.json.i
+data/queued_updates/Cressa's Garrison Scene.json.i
+data/items/Akstiletto Prime Barrel.json.i
+data/items/Neutralize.json.i
+data/updates/Venka.json.i
+data/items/Expel Corpus.json.i
+data/items/Warrior.json.i
+data/items/Heightened Reflexes.json.i
+data/items/Parry.json.i
+data/queued_updates/Harrow's Temple Scene.json.i
+data/queued_updates/Meso N3 Flawless.json.i
+data/items/Phoenix Renewal.json.i
+data/items/Coaction Drift.json.i
+data/items/Mara Detron.json.i
+data/items/Sheev Hilt.json.i
+data/items/Streamline.json.i
+data/items/Ravage.json.i
+data/items/Cleanse Grineer.json.i
+data/items/Onorix Handle.json.i
+data/items/Spare Parts.json.i
+data/items/Red Veil Augment Mod.json.i
+data/items/Secura Penta.json.i
+data/items/Velocitus Set.json.i
+data/items/Explosive Demise.json.i
+data/items/Blunderbuss.json.i
+data/queued_updates/Meso O1 Flawless.json.i
+data/queued_updates/Lith S5 Intact.json.i
+data/changes/Valkyr.json.i
+data/items/Secura Dual Cestra.json.i
+data/items/Odonata Prime Blueprint.json.i
+data/items/Vespa Nyx Helmet.json.i
+data/queued_updates/Guided Effigy.json.i
+data/items/Rift Strike.json.i
+data/items/Staggering Shield.json.i
+data/items/Nebula Bore.json.i
+data/queued_updates/Suda's Datascape Scene.json.i
+data/items/Pounce.json.i
+data/queued_updates/Meso C2 Flawless.json.i
+data/items/Noble Cadence.json.i
+data/items/Arcane Nullifier.json.i
+data/items/Fired Up.json.i
+data/items/Trinity Prime Neuroptics.json.i
+data/items/Rapid Resilience.json.i
+data/items/Axi K1 Intact.json.i
+data/items/Neo N1 Exceptional.json.i
+data/items/Glacial Edge.json.i
+data/items/Heated Charge.json.i
+data/items/Lith S1 Exceptional.json.i
+data/items/Expel Infested.json.i
+data/items/Prisma Grakata.json.i
+data/items/Soft Hands.json.i
+data/items/Axi N1 Radiant.json.i
+data/items/Dakra Prime Handle.json.i
+data/items/Detect Vulnerability.json.i
+data/queued_updates/Neo V5 Exceptional.json.i
+data/queued_updates/Axi A2 Radiant.json.i
+data/queued_updates/Axi H2 Intact.json.i
+data/items/Acrobat.json.i
+data/items/Snipetron Vandal Blueprint.json.i
+data/items/Arcane Velocity.json.i
+data/items/Piercing Step.json.i
+data/items/Tranquil Cleave.json.i
+data/items/Charged Chamber.json.i
+data/items/Axi K1 Flawless.json.i
+data/items/Savage Silence.json.i
+data/items/Growing Power.json.i
+data/items/Steel Fiber.json.i
+data/items/Gnashing Payara.json.i
+data/items/Total Eclipse.json.i
+data/items/Bounty Hunter.json.i
+data/items/Itzal Harness.json.i
+data/items/Adrenaline Boost.json.i
+data/items/Heavy Warhead.json.i
+data/queued_updates/Meso V5 Intact.json.i
+data/items/Weeping Wounds.json.i
+data/items/Mag Prime Systems.json.i
+data/items/Boltor Prime Receiver.json.i
+data/items/Auger Strike.json.i
+data/queued_updates/Axi V5 Intact.json.i
+data/queued_updates/Lith N3 Radiant.json.i
+data/queued_updates/Meso O1 Exceptional.json.i
+data/items/Prize Kill.json.i
+data/queued_updates/Lith S5 Radiant.json.i
+data/items/Vulcan Blitz.json.i
+data/items/Sharpened Bullets.json.i
+data/items/Shrapnel Rounds (Marelok).json.i
+data/items/Odonata Prime Set.json.i
+data/items/Cryo Rounds.json.i
+data/items/Seeking Shuriken.json.i
+data/items/Impaler Munitions.json.i
+data/items/Volt Prime Blueprint.json.i
+data/items/Centaur Set.json.i
+data/items/Stalk.json.i
+data/queued_updates/Neo S6 Flawless.json.i
+data/items/Galvanized Blade.json.i
+data/items/Radiant Finish.json.i
+data/items/Rift Torrent.json.i
+data/items/Arcane Fury.json.i
+data/items/Thunderbolt.json.i
+data/items/Neo S2 Flawless.json.i
+data/items/Glaive Prime Set.json.i
+data/items/Metal Auger.json.i
+data/items/Stormbringer.json.i
+data/items/Rime Vault.json.i
+data/items/Air Recon.json.i
+data/queued_updates/Neo N6 Radiant.json.i
+data/items/Argon Scope.json.i
+data/items/Savagery.json.i
+data/items/Corvas Set.json.i
+data/items/Armored Evade.json.i
+data/items/Mutalist Alad V Assassinate.json.i
+data/items/Heavy Trauma.json.i
+data/items/Venka Prime Blades.json.i
+data/items/Ice Storm.json.i
+data/items/Comet Blast.json.i
+data/items/Pulse Volt Helmet.json.i
+data/items/Legendary Fusion Core.json.i
+data/items/Investigator.json.i
+data/items/Meso S3 Radiant.json.i
+data/items/Vital Systems Bypass.json.i
+data/items/Soma Prime Stock.json.i
+data/items/Chlora Saryn Helmet.json.i
+data/items/Essence Loki Helmet.json.i
+data/items/Valkyr Prime Blueprint.json.i
+data/items/Ironclad Charge.json.i
+data/queued_updates/Neo N5 Intact.json.i
+data/items/Lith S2 Intact.json.i
+data/queued_updates/Neo T1 Intact.json.i
+data/items/Orthos Prime Blueprint.json.i
+data/items/Neo V1 Radiant.json.i
+data/queued_updates/Axi B2 Flawless.json.i
+data/items/Cataclysmic Continuum.json.i
+data/items/Curative Undertow.json.i
+data/items/Guardian Derision.json.i
+data/items/Titanic Rumbler.json.i
+data/items/Flak Shot.json.i
+data/items/Sancti Tigris.json.i
+data/items/Latron Wraith Receiver.json.i
+data/items/Vaykor Marelok.json.i
+data/queued_updates/Axi O1 Flawless.json.i
+data/items/Rhino Prime Blueprint.json.i
+data/items/Ayr Ayatan Sculpture.json.i
+data/items/Naramon Lens.json.i
+data/items/Tectonic Fracture.json.i
+data/items.json.i
+data/items.json.d
+data/items/Cunning Aspect.json.i
+data/items/Valkyr Prime Chassis.json.i
+data/items/Fast Deflection.json.i
+data/items/Burston Prime Barrel.json.i
+data/items/Meridian Trinity Helmet.json.i
+data/items/Thief's Wit.json.i
+data/items/Strun Wraith Stock.json.i
+data/items/Grinloked.json.i
+data/items/Blaze.json.i
+data/items/Hydraulic Crosshairs.json.i
+data/items/Fluctus Barrel.json.i
+data/items/Lith V1 Flawless.json.i
+data/queued_updates/Orvius Disc.json.i
+data/queued_updates/Orvius Blade.json.i
+data/items/Relentless Combination.json.i
+data/queued_updates/Shrapnel Rounds (Marelok).json.i
+data/items/Saryn Prime Set.json.i
+data/items/Enguard.json.i
+data/items/Low Current Leap.json.i
+data/items/Fang Prime Set.json.i
+data/queued_updates/Axi V3 Flawless.json.i
+data/changes/assimilate.json.i
+data/items/Streamlined Form.json.i
+data/items/Neo D1 Flawless.json.i
+data/items/Expel Grineer.json.i
+data/items/Vasto Prime Blueprint.json.i
+data/items/Vectis Prime Blueprint.json.i
+data/items/Homing Fang.json.i
+data/items/Itzal Set.json.i
+data/items/Braton Prime Blueprint.json.i
+data/items/Pistol Gambit.json.i
+data/items/Paris Prime String.json.i
+data/items/Axi V2 Radiant.json.i
+data/items/Crushing Ruin.json.i
+data/queued_updates/Cleanse Corrupted.json.i
+data/items/Elytron Wings.json.i
+data/items/Prisma Shade.json.i
+data/items/Sanctuary.json.i
+data/items/Kinetic Ricochet.json.i
+data/items/Fragor Prime Blueprint.json.i
+data/items/Glaive Prime Disc.json.i
+data/items/Incendiary Coat.json.i
+data/items/Lith M1 Flawless.json.i
+data/changes/Cernos.json.i
+data/items/Quick Rest.json.i
+data/items/Storm Volt Helmet.json.i
+data/items/Arcane Deflection.json.i
+data/items/Fatal Attraction.json.i
+data/items/Shield Transference.json.i
+data/sub_icons/lower_limb_128x128.png.i
+data/items/Ammo Stock.json.i
+data/items/Dual Decurion Receiver.json.i
+data/items/Sundering Strike.json.i
+data/items/Transient Fortitude.json.i
+data/items/Velocitus Stock.json.i
+data/items/Double-Barrel Drift.json.i
+data/items/Cyngas Stock.json.i
+data/items/Latron Wraith Barrel.json.i
+data/items/Bo Prime Handle.json.i
+data/items/Sequence Burn.json.i
+data/queued_updates/Disarming Purity.json.i
+data/items/Imperator Vandal Set.json.i
+data/queued_updates/Meso V5 Exceptional.json.i
+data/items/Organ Shatter.json.i
+data/queued_updates/Lith A2 Exceptional.json.i
+data/queued_updates/Meso M1 Exceptional.json.i
+data/items/Recuperate.json.i
+data/items/Neo S1 Radiant.json.i
+data/items/Meso N2 Intact.json.i
+data/items/Wyrm Prime Set.json.i
+data/items/Electro Pulse.json.i
+data/items/Tigris Prime Barrel.json.i
+data/items/Frost Prime Chassis.json.i
+data/items/Gunslinger.json.i
+data/items/Power Drift.json.i
+data/items/Counterweight.json.i
+data/items/Loot Detector.json.i
+data/items/Heavy Impact.json.i
+data/items/Neo S1 Flawless.json.i
+data/items/Meso V3 Radiant.json.i
+data/items/Gambit Vauban Helmet.json.i
+data/items/Fang Prime Handle.json.i
+data/queued_updates/Oberon Prime Chassis.json.i
+data/items/True Steel.json.i
+data/items/Agile Aim.json.i
+data/sub_icons/stock_128x128.png.i
+data/queued_updates/Skull Shots (Viper).json.i
+data/items/Surging Dash.json.i
+data/items/Afterburn.json.i
+data/items/Meso N1 Flawless.json.i
+data/items/Dera Vandal Blueprint.json.i
+data/items/Elytron Harness.json.i
+data/items/Axi V1 Intact.json.i
+data/items/Nikana Prime Blade.json.i
+data/items/Odonata Prime Harness.json.i
+data/queued_updates/Expel Corrupted.json.i
+data/queued_updates/Sovereign Outcast.json.i
+data/items/Frost Prime Blueprint.json.i
+data/items/Crowd Dispersion.json.i
+data/items/Shelter.json.i
+data/items/Xiphos Fuselage.json.i
+data/items/Energy Amplifier.json.i
+data/items/Meso V1 Flawless.json.i
+data/items/Rakta Ballistica.json.i
+data/items/Virulent Scourge.json.i
+data/items/Scattered Justice.json.i
+data/items/Arcane Rage.json.i
+data/items/Arcane Strike.json.i
+data/items/Anemic Agility.json.i
+data/queued_updates/Banshee Prime Neuroptics.json.i
+data/items/Smite Infusion.json.i
+data/items/Meso B1 Flawless.json.i
+data/items/Icy Avalanche.json.i
+data/items/Fireball Frenzy.json.i
+data/items/Wraith Twin Vipers Barrels.json.i
+data/sub_icons/arch-system_128x128.png.i
+data/queued_updates/Neo V3 Intact.json.i
+data/items/Centaur Blade.json.i
+data/items/Flux Nova Helmet.json.i
+data/items/Kaszas Blade.json.i
+data/items/Nekros Prime Systems.json.i
+data/items/Venomous Rise.json.i
+data/items/Arcane Tempo.json.i
+data/items/Scattering Inferno.json.i
+data/queued_updates/Neo V3 Radiant.json.i
+data/items/Dual Kamas Prime Blade.json.i
+data/items/Hastened Steps.json.i
+data/items/Shadow Harvest.json.i
+data/items/Arcane Precision.json.i
+data/items/Spry Sights.json.i
+data/items/Tainted Shell.json.i
+data/queued_updates/Melee Riven Mod (Veiled).json.i
+data/queued_updates/Meso V5 Radiant.json.i
+data/items/Nyx Prime Chassis.json.i
+data/items/Brain Storm (Grakata).json.i
+data/items/Speed Trigger.json.i
+data/queued_updates/Neo V3 Flawless.json.i
+data/items/Ash Prime Chassis.json.i
+data/items/Purifying Flames.json.i
+data/updates/PrecisionMunition.json.i
+data/items/Quick Charge.json.i
+data/queued_updates/Lith S5 Exceptional.json.i
+data/items/Vicious Frost.json.i
+data/items/Arcane Healing.json.i
+data/items/Meso N1 Radiant.json.i
+data/items/War Hilt.json.i
+data/items/Dual Rounds.json.i
+data/items/Vazarin Lens.json.i
+data/items/Rathbone Handle.json.i
+data/items/Lith F2 Radiant.json.i
+data/items/Mobilize.json.i
+data/items/Deceptive Bond.json.i
+data/updates/Assimilate.json.i
+data/items/Elytron Systems.json.i
+data/items/Axi T1 Intact.json.i
+data/items/Carrier Prime Cerebrum.json.i
+data/items/Fracturing Crush.json.i
+data/items/Retribution.json.i
+data/items/Sah Ayatan Sculpture.json.i
+data/items/Combustion Rounds.json.i
+data/items/Meso D1 Intact.json.i
+data/items/Amesha Systems.json.i
+data/items/Neo D1 Exceptional.json.i
+data/queued_updates/Neo N4 Flawless.json.i
+data/queued_updates/Lith B1 Intact.json.i
+data/items/Nyx Prime Neuroptics.json.i
+data/items/Polar Magazine.json.i
+data/items/True Punishment.json.i
+data/items/Armored Agility.json.i
+data/items/Loose Hatch.json.i
+data/items/Axi T1 Radiant.json.i
+data/items/Power of Three.json.i
+data/items/Shocking Touch.json.i
+data/items/Corrupt Charge.json.i
+data/queued_updates/Axi B1 Radiant.json.i
+data/items/Fragor Prime Set.json.i
+data/items/Axi S1 Intact.json.i
+data/items/Frost Prime Neuroptics.json.i
+data/items/Vauban Prime Set.json.i
+data/queued_updates/Axi H1 Radiant.json.i
+data/items/Scindo Prime Set.json.i
+data/items/Meso C1 Exceptional.json.i
+data/items/Ember Prime Chassis.json.i
+data/items/Recharge Barrier.json.i
+data/items/Poisonous Sting.json.i
+data/items/Heavy Caliber.json.i
+data/sub_icons/blade_128x128.png.i
+data/items/Dual Kamas Prime Blueprint.json.i
+data/items/Meso B1 Radiant.json.i
+data/items/Tainted Clip.json.i
+data/items/Boltor Prime Blueprint.json.i
+data/items/Superior Defenses.json.i
+data/items/Electromagnetic Shielding.json.i
+data/items/Chorus Banshee Helmet.json.i
+data/items/Piv Ayatan Sculpture.json.i
+data/items/Locust Ash Helmet.json.i
+data/items/Rhino Prime Neuroptics.json.i
+data/queued_updates/Teshin's Refuge Scene.json.i
+data/items/Seismic Wave.json.i
+data/items/Ankyros Prime Gauntlet.json.i
+data/items/Itzal Systems.json.i
+data/items/Rupture.json.i
+data/items/Agkuza Handle.json.i
+data/queued_updates/Helios Prime Cerebrum.json.i
+data/items/Maximum Capacity.json.i
+data/items/Snap Shot.json.i
+data/items/Smite Infested.json.i
+data/items/Arcane Aegis.json.i
+data/items/Sands of Inaros.json.i
+data/items/Rathbone Set.json.i
+data/items/Cernos Prime Grip.json.i
+data/items/Concussion Rounds.json.i
+data/items/Neo D1 Intact.json.i
+data/items/New Loka Augment Mod.json.i
+data/items/Sheev Blade.json.i
+data/items/Scimitar Avionics.json.i
+data/items/Hollowed Bullets.json.i
+data/items/Nova Prime Chassis.json.i
+data/items/Piercing Caliber.json.i
+data/items/Final Tap.json.i
+data/items/Centaur Handle.json.i
+data/sub_icons/barrel_128x128.png.i
+data/items/Trinity Prime Systems.json.i
+data/sub_icons/systems_128x128.png.i
+data/items/Shocking Speed.json.i
+data/items/Entropy Burst.json.i
+data/items/Rumbled.json.i
+data/queued_updates/Neo B1 Radiant.json.i
+data/queued_updates/Neo S6 Exceptional.json.i
+data/queued_updates/Magnetized Discharge.json.i
+data/items/Scorpion Ash Helmet.json.i
+data/items/Searing Steel.json.i
+data/queued_updates/Neo V5 Intact.json.i
+data/items/Bright Purity.json.i
+data/items/Smoke Shadow.json.i
+data/items/Malignant Force.json.i
+data/items/Cyngas Set.json.i
+data/items/Meso C1 Flawless.json.i
+data/queued_updates/Ignis Wraith Blueprint.json.i
+data/items/Push & Pull.json.i
+data/items/Eleventh Storm.json.i
+data/items/Sniper Scavenger.json.i
+data/items/Critical Delay.json.i
+data/items/Tactical Retreat.json.i
+data/queued_updates/Lith N1 Flawless.json.i
+data/items/Endurance Drift.json.i
+data/items/Elemental Sandstorm.json.i
+data/items/Morphic Transformer.json.i
+data/items/Arc Coil.json.i
+data/queued_updates/Sybaris Prime Barrel.json.i
+data/items/Pistol Ammo Mutation.json.i
+data/items/Axi V5 Radiant.json.i
+data/items/Intruder.json.i
+data/items/Ice Wave Impedance.json.i
+data/items/Sicarus Prime Set.json.i
+data/items/Naramon Transmute Core.json.i
+data/items/Agkuza Guard.json.i
+data/items/Toxic Blight.json.i
+data/items/Fomorian Accelerant.json.i
+data/queued_updates/Neo B1 Exceptional.json.i
+data/sub_icons/disc_128x128.png.i
+data/items/Rejuvenation.json.i
+data/items/Lith S2 Flawless.json.i
+data/items/Night Stalker.json.i
+data/items/Corvas Stock.json.i
+data/items/Enemy Sense.json.i
+data/items/Corvas Barrel.json.i
+data/queued_updates/Axi C2 Flawless.json.i
+data/queued_updates/Meso N4 Exceptional.json.i
+data/items/Secondary Wind.json.i
+data/items/Hallowed Eruption.json.i
+data/items/Kavasa Prime Collar Set.json.i
+data/queued_updates/Primed Regen.json.i
+data/items/Axi G1 Flawless.json.i
+data/items/Toxic Flight.json.i
+data/items/Haven.json.i
+data/items/Quick Return.json.i
+data/items/Assimilate.json.i
+data/items/Madurai Transmute Core.json.i
+data/items/Sheev Blueprint.json.i
+data/items/Axi G1 Intact.json.i
+data/items/Loose Chamber.json.i
+data/items/Calculated Spring.json.i
+data/items/Sacrifice.json.i
+data/queued_updates/Lith S3 Radiant.json.i
+data/items/Akbronco Prime Blueprint.json.i
+data/items/Shotgun Amp.json.i
+data/items/Safeguard.json.i
+data/items/Primed Chamber.json.i
+data/sub_icons/gauntlet_128x128.png.i
+data/items/Glaive Prime Blade.json.i
+data/items/Brief Respite.json.i
+data/queued_updates/Neo S6 Radiant.json.i
+data/items/Neo N2 Intact.json.i
+data/items/Eroding Blight.json.i
+data/items/Strun Wraith Set.json.i
+data/items/Mesa’s Waltz.json.i
+data/items/Nikana Prime Set.json.i
+data/items/Ripper Rounds.json.i
+data/items/Overextended.json.i
+data/items/Lith A1 Flawless.json.i
+data/sub_icons/cerebrum_128x128.png.i
+data/queued_updates/Axi C2 Intact.json.i
+data/items/Vital Sense.json.i
+data/items/Blind Rage.json.i
+data/items/Kill Switch.json.i
+data/items/Onorix Set.json.i
+data/items/Neo N1 Radiant.json.i
+data/items/Synoid Gammacor.json.i
+data/items/Contagious Spread.json.i
+data/items/Shotgun Scavenger.json.i
+data/items/Reach.json.i
+data/items/Agkuza Set.json.i
+data/items/Arcane Trickery.json.i
+data/items/Smite Grineer.json.i
+data/items/Rending Wind.json.i
+data/sub_icons/grip_128x128.png.i
+data/items/Self Destruct.json.i
+data/queued_updates/Fulmination.json.i
+data/items/Valkyr Prime Neuroptics.json.i
+data/items/Continuous Misery.json.i
+data/items/Atlantis Vulcan.json.i
+data/items/Ankyros Prime Blueprint.json.i
+data/items/Targeting Receptor.json.i
+data/queued_updates/Euphona Prime Blueprint.json.i
+data/items/Funnel Clouds.json.i
+data/items/Primed Pistol Mutation.json.i
+data/items/Vaykor Sydon.json.i
+data/items/Provoked.json.i
+data/items/Steel Charge.json.i
+data/items/Continuity.json.i
+data/items/Purging Slash.json.i
+data/items/Scavenge.json.i
+data/queued_updates/Axi A2 Exceptional.json.i
+data/items/Emergent Aftermath.json.i
+data/items/Kaszas Handle.json.i
+data/items/Axi N1 Exceptional.json.i
+data/items/Cephalon Suda Augment Mod.json.i
+data/queued_updates/Neo N6 Flawless.json.i
+data/items/Mantis Engines.json.i
+data/items/Adhesive Blast.json.i
+data/items/Infected Clip.json.i
+data/items/Rush.json.i
+data/items/Deep Freeze.json.i
+data/items/Boltor Prime Set.json.i
+data/items/Neo S2 Intact.json.i
+data/items/Speed Holster.json.i
+data/queued_updates/Axi A2 Intact.json.i
+data/sub_icons/blueprint_128x128.png.i
+data/items/Shotgun Savvy.json.i
+data/items/Metal Fiber.json.i
+data/items/Axi N1 Intact.json.i
+data/items/Master Thief.json.i
+data/items/Axi T1 Flawless.json.i
+data/items/Primed Rifle Ammo Mutation.json.i
+data/items/Seismic Palm.json.i
+data/items/Nekros Prime Set.json.i
+data/items/Karak Wraith Blueprint.json.i
+data/items/Vitality.json.i
+data/items/Latron Prime Stock.json.i
+data/items/Venomous Clip.json.i
+data/items/Killing Blow.json.i
+data/items/Lex Prime Blueprint.json.i
+data/sub_icons/handle_128x128.png.i
+data/items/Measured Burst.json.i
+data/items/Arcane Ice.json.i
+data/items/Despoil.json.i
+data/items/Chilling Globe.json.i
+data/items/Quick Thinking.json.i
+data/items/Double Tap.json.i
+data/sub_icons/engines_128x128.png.i
+data/items/Shield of Shadows.json.i
+data/items/Paris Prime Grip.json.i
+data/items/Lock and Load.json.i
+data/items/Strafing Slide.json.i
+data/items/Nikana Prime Blueprint.json.i
+data/items/Fortitude.json.i
+data/items/Gilded Truth.json.i
+data/queued_updates/Neo N4 Intact.json.i
+data/items/Cernos Prime Set.json.i
+data/items/Karak Wraith Stock.json.i
+data/items/Axi E1 Flawless.json.i
+data/items/Meso N2 Flawless.json.i
+data/items/Bore.json.i
+data/updates/DispatchOverdrive.json.i
+data/items/Karak Wraith Barrel.json.i
+data/items/Overcharge Detectors.json.i
+data/items/Harkonar Scope.json.i
+data/queued_updates/Color Key.json.i
+data/queued_updates/Meso M1 Flawless.json.i
+data/items/Venka Prime Set.json.i
+data/items/Dual Decurion Barrel.json.i
+data/queued_updates/Neo N5 Radiant.json.i
+data/queued_updates/Inaros Tomb Scene.json.i
+data/items/Rifle Scavenger.json.i
+data/items/Striker.json.i
+data/items/Spring-Loaded Broadhead.json.i
+data/items/Neo V4 Radiant.json.i
+data/items/Vexing Retaliation.json.i
+data/items/Mag Prime Blueprint.json.i
+data/items/Iron Phoenix.json.i
+data/queued_updates/Meso S3 Intact.json.i
+data/items/Synoid Heliocor.json.i
+data/items/Spinning Needle.json.i
+data/items/Protect.json.i
+data/updates/GuardianDerision.json.i
+data/queued_updates/Lith S4 Flawless.json.i
+data/items/Ballistic Bullseye.json.i
+data/items/Primed Pressure Point.json.i
+data/queued_updates/Stockpiled Blight.json.i
+data/items/Wraith Twin Vipers Link.json.i
+data/items/Vaya Ayatan Sculpture.json.i
+data/queued_updates/Axi H1 Exceptional.json.i
+data/items/Axi S1 Radiant.json.i
+data/items/Imperator Vandal Receiver.json.i
+data/items/Snipetron Vandal Receiver.json.i
+data/items/Madurai Lens.json.i
+data/items/Latron Wraith Set.json.i
+data/queued_updates/Entropy Detonation.json.i
+data/items/Lith V1 Radiant.json.i
+data/items/Axi N3 Radiant.json.i
+data/items/Enemy Radar.json.i
+data/queued_updates/Sybaris Prime Stock.json.i
+data/items/Bane of Corpus.json.i
+data/queued_updates/Neo N5 Exceptional.json.i
+data/items/Hammer Shot.json.i
+data/queued_updates/Lith G! Flawless.json.i
+data/items/Burdened Magazine.json.i
+data/items/Hysterical Assault.json.i
+data/queued_updates/Axi C1 Flawless.json.i
+data/items/Condition Overload.json.i
+data/items/Anticipation.json.i
+data/items/Triple Tap.json.i
+data/items/Astral Slash.json.i
+data/queued_updates/Axi E2 Radiant.json.i
+data/queued_updates/Lith N2 Exceptional.json.i
+data/items/Neo N4 Radiant.json.i
+data/items/Primed Point Blank.json.i
+data/queued_updates/Axi V5 Flawless.json.i
+data/items/Kavasa Prime Collar Band.json.i
+data/items/Strun Wraith Receiver.json.i
+data/items/Valkyr Prime Set.json.i
+data/items/Trick Mag.json.i
+data/queued_updates/Meso F2 Intact.json.i
+data/items/Auxiliary Power.json.i
+data/items/Deadly Sequence.json.i
+data/items/Prisma Skana.json.i
+data/items/The Perrin Sequence Augment Mod.json.i
+data/items/Fever Strike.json.i
+data/items/Pummel.json.i
+data/items/Pistol Scavenger.json.i
+data/queued_updates/Neo N6 Intact.json.i
+data/items/Arcane Energize.json.i
+data/queued_updates/Lith S5 Flawless.json.i
+data/items/Critical Deceleration.json.i
+data/items/Menticide Nyx Helmet.json.i
+data/queued_updates/Meso V3 Flawless.json.i
+data/items/Galatine Prime Set.json.i
+data/queued_updates/Neo V2 Exceptional.json.i
+data/items/Irradiating Disarm.json.i
+data/items/Ruinous Extension.json.i
+data/items/Tigris Prime Stock.json.i
+data/items/Nekros Prime Neuroptics.json.i
+data/items/Tesla Link.json.i
+data/items/Surplus Diverters.json.i
+data/items/Hush.json.i
+data/items/Bane of Grineer.json.i
+data/queued_updates/Lith S6 Exceptional.json.i
+data/queued_updates/Pyroclastic Flow.json.i
+data/items/Furor.json.i
+data/queued_updates/Grineer Forest Industry.json.i
+data/items/Bronco Prime Blueprint.json.i
+data/queued_updates/Euphona Prime Set.json.i
+data/items/Axi N2 Exceptional.json.i
+data/items/Magazine Extension.json.i
+data/items/Kinetic Collision.json.i
+data/items/Thermagnetic Shells.json.i
+data/items/Reflection.json.i
+data/items/High Voltage.json.i
+data/queued_updates/Axi C2 Exceptional.json.i
+data/queued_updates/Gorgon Wraith Stock.json.i
+data/items/Shattering Storm.json.i
+data/items/Shredder.json.i
+data/items/Suppress.json.i
+data/items/Barrel Diffusion.json.i
+data/items/Mortal Conduct.json.i
+data/items/Singularity.json.i
+data/items/Nikana Prime Hilt.json.i
+data/items/Spoiled Strike.json.i
+data/items/Rifle Ammo Mutation.json.i
+data/items/Aurora Frost Helmet.json.i
+data/items/Revenge.json.i
+data/items/Axi V5 Exceptional.json.i
+data/items/Cleaving Whirlwind.json.i
+data/items/Vasto Prime Receiver.json.i
+data/items/Sheev Heatsink.json.i
+data/items/Paris Prime Set.json.i
+data/items/No Return.json.i
+data/queued_updates/Sybaris Prime Blueprint.json.i
+data/items/Crossing Snakes.json.i
+data/items/Reflex Coil.json.i
+data/items/Soul Survivor.json.i
+data/items/Neo S1 Intact.json.i
+data/items/Thundermiter (Miter).json.i
+data/queued_updates/Meso N4 Intact.json.i
+data/items/Buzz Kill.json.i
+data/items/Lith V1 Intact.json.i
+data/queued_updates/Sybaris Prime Receiver.json.i
+data/queued_updates/Lith V3 Intact.json.i
+data/items/Seeking Force.json.i
+data/queued_updates/Axi O1 Intact.json.i
+data/items/Lith S1 Intact.json.i
+data/queued_updates/Neo B1 Flawless.json.i
+data/items/Vazarin Transmute Core.json.i
+data/items/Accelerated Deflection.json.i
+data/queued_updates/Flux Overdrive.json.i
+data/sub_icons/receiver_128x128.png.i
+data/queued_updates/Oberon Prime Neuroptics.json.i
+data/items/Blind Justice.json.i
+data/queued_updates/Vay Hek Frequency Triangulator.json.i
+data/queued_updates/Gorgon Wraith Receiver.json.i
+data/items/Hikou Prime Stars.json.i
+data/items/Pacifying Bolts.json.i
+data/items/Focused Acceleration.json.i
+data/queued_updates/Silva & Aegis Prime Guard.json.i
+data/items/Neo S5 Radiant.json.i
+data/queued_updates/Banshee Prime Blueprint.json.i
+data/items/Ember Prime Systems.json.i
+data/items/Calm & Frenzy.json.i
+data/items/Savior Decoy.json.i
+data/items/Signal Flare.json.i
+data/sub_icons/band_128x128.png.i
+data/items/Venka Prime Blueprint.json.i
+data/items/Battering Maneuver.json.i
+data/items/Axi N2 Flawless.json.i
+data/items/Nova Prime Systems.json.i
+data/items/Secura Lecta.json.i
+data/items/Howl.json.i
+data/items/Looter.json.i
+data/items/Reaper Prime Set.json.i
+data/items/Xiphos Engines.json.i
+data/updates/EmergentAftermath.json.i
+data/queued_updates/Neo B3 Exceptional.json.i
+data/items/Air Thrusters.json.i
+data/items/Arcane Barrier.json.i
+data/sub_icons/upper_limb_128x128.png.i
+data/queued_updates/Axi H2 Radiant.json.i
+data/items/Plan B.json.i
+data/items/Frail Momentum.json.i
+data/items/Vile Precision.json.i
+data/queued_updates/Neo N6 Exceptional.json.i
+data/items/Vasto Prime Barrel.json.i
+data/items/Primed Shotgun Ammo Mutation.json.i
+data/queued_updates/Lith G1 Intact.json.i
+data/items/Final Act.json.i
+data/items/Vigor.json.i
+data/queued_updates/Lith V3 Exceptional.json.i
+data/items/Abating Link.json.i
+data/items/Hikou Prime Set.json.i
+data/items/Heartseeker.json.i
+data/items/Meso V2 Exceptional.json.i
+data/queued_updates/Meso O1 Radiant.json.i
+data/template.json.i
+data/items/Body Count.json.i
+data/items/Carrier Prime Carapace.json.i
+data/items/Link Shields.json.i
+data/items/Regen.json.i
+data/queued_updates/Veil's Binding Scene.json.i
+data/items/Defiled Reckoning.json.i
+data/items/Rending Turn.json.i
+data/items/Energy Channel.json.i
+data/items/Energy Field.json.i
+data/items/Meso B1 Exceptional.json.i
+data/queued_updates/Helios Prime Carapace.json.i
+data/queued_updates/Banshee Prime Chassis.json.i
+data/items/Xiphos Avionics.json.i
+data/items/Stand Ground.json.i
+data/items/Fluctus Stock.json.i
+data/items/Laser Sight.json.i
+data/items/Entropy Flight.json.i
+data/items/Prisma Dual Cleavers.json.i
+data/items/Arcane Victory.json.i
+data/items/Impenetrable Offense.json.i
+data/items/Reinforcing Stomp.json.i
+data/queued_updates/Thundermiter (Miter).json.i
+data/queued_updates/Lith S6 Flawless.json.i
+data/items/Axi G1 Exceptional.json.i
+data/items/Meso N1 Exceptional.json.i
+data/items/Targeting Subsystem.json.i
+data/items/Nyx Prime Systems.json.i
+data/items/Sudden Impact.json.i
+data/items/Saryn Prime Neuroptics.json.i
+data/queued_updates/Euphona Prime Receiver.json.i
+data/items/Vampire Leech.json.i
+data/items/Cyan Ayatan Star.json.i
+data/queued_updates/Axi O1 Exceptional.json.i
+data/items/Hawk Eye.json.i
+data/items/Deft Tempo.json.i
+data/items/Lith F2 Exceptional.json.i
+data/items/Neo V1 Intact.json.i
+data/items/Cunning Drift.json.i
+data/items/Neo N3 Exceptional.json.i
+data/items/Nyx Prime Blueprint.json.i
+data/items/Phaedra Barrel.json.i
+data/items/Automatic Trigger.json.i
+data/items/Axi S1 Exceptional.json.i
+data/items/Arcane Acceleration.json.i
+data/items/Wyrm Prime Carapace.json.i
+data/items/Mutalist Nav Coordinates.json.i
+data/items/Swift Deth.json.i
+data/items/Shield Charger.json.i
+data/items/Mantis Set.json.i
+data/items/Winds of Purity.json.i
+data/items/Volcanic Edge.json.i
+data/items/Neo N3 Flawless.json.i
+data/queued_updates/Rifle Riven Mod (Veiled).json.i
+data/items/Meso S3 Flawless.json.i
+data/items/Ember Prime Neuroptics.json.i
+data/items/Ankyros Prime Blade.json.i
+data/queued_updates/Axi R1 Flawless.json.i
+data/items/Braton Prime Barrel.json.i
+data/items/Meso V1 Exceptional.json.i
+data/items/Lith M1 Intact.json.i
+data/items/Arcane Consequence.json.i
+data/items/Precision Munition.json.i
+data/items/Wildfire.json.i
+data/items/Primed Flow.json.i
+data/items/Hastened Deflection.json.i
+data/items/Coil Mag Helmet.json.i
+data/items/Meteor Munitions.json.i
+data/items/Vermilion Storm.json.i
+data/items/Snipetron Vandal Barrel.json.i
+data/items/Swirling Tiger.json.i
+data/items/Swindle Loki Helmet.json.i
+data/items/Primal Rage.json.i
+data/items/Axi N3 Flawless.json.i
+data/queued_updates/Trample.json.i
+data/items/Hydraulic Barrel.json.i
+data/items/Loaded Capacity.json.i
+data/queued_updates/Neo V3 Exceptional.json.i
+data/items/Akstiletto Prime Receiver.json.i
+data/items/Dual Decurion Set.json.i
+data/items/Fire Fright.json.i
+data/queued_updates/Helios Prime Blueprint.json.i
+data/queued_updates/Axi E2 Exceptional.json.i
+data/items/Scorch.json.i
+data/items/Tigris Prime Set.json.i
+data/items/Loki Prime Chassis.json.i
+data/queued_updates/Corpus Void Key.json.i
+data/queued_updates/Oberon Prime Set.json.i
+data/items/Lith M1 Exceptional.json.i
+data/queued_updates/Meso F2 Exceptional.json.i
+data/queued_updates/Banshee Prime Set.json.i
+data/items/Gun Glide.json.i
+data/items/Esprit Vauban Helmet.json.i
+data/items/Meso C1 Radiant.json.i
+data/items/Infested Impedance.json.i
+data/items/Natural Talent.json.i
+data/items/Primed Target Cracker.json.i
+data/items/Sense Danger.json.i
+data/items/Insulation.json.i
+data/changes/Venka.json.i
+data/items/Strun Wraith Blueprint.json.i
+data/items/Frost Prime Systems.json.i
+data/items/Akstiletto Prime Link.json.i
+data/items/Shell Shock.json.i
+data/items/Bleeding Willow.json.i
+data/queued_updates/Meso N4 Radiant.json.i
+data/items/Shield Flux.json.i
+data/items/Dera Vandal Receiver.json.i
+data/updates/assimilate.json.i
+data/queued_updates/Aklex Prime Link.json.i
+data/items/Sonic Fracture.json.i
+data/items/Sure Shot.json.i
+data/items/Mag Prime Set.json.i
+data/items/Voltaic Lance.json.i
+data/items/Target Cracker.json.i
+data/items/War Set.json.i
+data/items/Strun Wraith Barrel.json.i
+data/items/Hunter's Bonesaw.json.i
+data/sub_icons/carapace_128x128.png.i
+data/items/Itzal Wings.json.i
+data/items/Ambush Optics (Rubico).json.i
+data/items/Divebomb Vortex.json.i
+data/items/Enduring Strike.json.i
+data/items/Escape Velocity.json.i
+data/items/Soma Prime Blueprint.json.i
+data/items/Soma Prime Receiver.json.i
+data/items/Shield Overload.json.i
+data/items/Braton Prime Receiver.json.i
+data/items/Boltor Prime Barrel.json.i
+data/items/Vanquished Prey.json.i
+data/items/Sundering Weave.json.i
+data/items/Draining Gloom.json.i
+data/items/Vectis Prime Receiver.json.i
+data/items/Meso F2 Radiant.json.i
+data/items/Crash Shot.json.i
+data/items/Latron Prime Set.json.i
+data/items/Rage.json.i
+data/queued_updates/Neo V5 Flawless.json.i
+data/items/Rifle Aptitude.json.i
+data/items/Parallax Scope.json.i
+data/items/Vulpine Mask.json.i
+data/items/Sapping Reach.json.i
+data/items/Health Conversion.json.i
+data/items/Lucky Shot.json.i
+data/items/Four Riders.json.i
+data/items/Wyrm Prime Systems.json.i
+data/items/Cyngas Barrel.json.i
+data/items/Proof Fragment.json.i
+data/.hgignore.i
+data/items/Tigris Prime Blueprint.json.i
+data/items/Entropy Spike.json.i
+data/items/Nova Prime Set.json.i
+data/sub_icons/fuselage_128x128.png.i
+data/queued_updates/Neo N5 Flawless.json.i
+data/items/Amesha Harness.json.i
+data/items/Searing Leap.json.i
+data/items/Meso D1 Radiant.json.i
+data/items/Shell Rush.json.i
+data/items/Vectis Prime Set.json.i
+data/items/Toxic Sequence.json.i
+data/items/Mischief.json.i
+data/items/Flailing Branch.json.i
+data/queued_updates/Lith N2 Intact.json.i
+data/items/Firewalker.json.i
+data/items/Shred Shot.json.i
+data/queued_updates/Axi B1 Flawless.json.i
+data/items/Terminal Velocity.json.i
+data/queued_updates/Lith A2 Intact.json.i
+data/items/Neo S3 Flawless.json.i
+data/items/Onorix Blade.json.i
+data/items/Static Discharge.json.i
+data/queued_updates/Axi A2 Flawless.json.i
+data/items/Ember Prime Blueprint.json.i
+data/items/Lith A1 Radiant.json.i
+data/items/Modified Munitions.json.i
+data/items/Argent Scourge.json.i
+data/items/Infiltrate.json.i
+data/items/Combustion Beam.json.i
+data/items/Pointed Wind.json.i
+data/queued_updates/Lith A2 Radiant.json.i
+data/sub_icons/harness_128x128.png.i
+data/items/Antitoxin.json.i
+data/items/Empowered Blades.json.i
+data/items/Arcane Agility.json.i
+data/items/Meso D1 Flawless.json.i
+data/queued_updates/Neo B3 Radiant.json.i
+data/updates/PrismaShade.json.i
+data/items/Neutron Star.json.i
+data/items/Extend.json.i
+data/items/Dakra Prime Blade.json.i
+data/queued_updates/Lith C1 Intact.json.i
+data/items/Lex Prime Set.json.i
+data/items/Nezha Neuroptics Blueprint.json.i
+data/items/Saryn Prime Chassis.json.i
+data/items/Sinking Talon.json.i
+data/items/Dual Kamas Prime Set.json.i
+data/sub_icons/chassis_128x128.png.i
+data/items/Dual Kamas Prime Handle.json.i
+data/queued_updates/Meso F1 Intact.json.i
+data/items/Imperator Vandal Barrel.json.i
+data/items/Carrier Prime Set.json.i
+data/items/Energy Inversion.json.i
+data/items/Frost Prime Set.json.i
+data/items/System Reroute.json.i
+data/items/Seeker.json.i
+data/items/Convulsion.json.i
+data/items/Swing Line.json.i
+data/queued_updates/Lith C1 Radiant.json.i
+data/items/Second Wind.json.i
+data/queued_updates/Neo B1 Intact.json.i
+data/items/Rubedo-Lined Barrel.json.i
+data/items/Sicarus Prime Blueprint.json.i
+data/items/Unleashed.json.i
+data/items/Embedded Catalyzer.json.i
+data/items/Rising Skill.json.i
+data/sub_icons/pouch_128x128.png.i
+data/items/Reaper Prime Handle.json.i
+data/items/Stealth Drift.json.i
+data/items/Cernos Prime Blueprint.json.i
+data/queued_updates/Meso S5 Radiant.json.i
+data/items/Reflect.json.i
+data/items/Primed Bane of Corpus.json.i
+data/items/Arcane Pulse.json.i
+data/items/Akbronco Prime Link.json.i
+data/items/Axi C1 Exceptional.json.i
+data/queued_updates/Axi E1 Exceptional.json.i
+data/items/Maiming Strike.json.i
+data/items/Xiphos Set.json.i
+data/items/Snipetron Vandal Set.json.i
+data/items/Neo N1 Intact.json.i
+data/items/Pistol Amp.json.i
+data/items/Ember Prime Set.json.i
+data/items/Sword Alone.json.i
+data/items/Meso V1 Radiant.json.i
+data/sub_icons/buckle_128x128.png.i
+data/items/Dera Vandal Set.json.i
+data/items/Pain Threshold.json.i
+data/items/Wyrm Prime Blueprint.json.i
+data/items/Energy Siphon.json.i
+data/items/Aviator.json.i
+data/items/Electrified Barrel.json.i
+data/items/Healing Return.json.i
+data/items/Imperator Vandal Blueprint.json.i
+data/queued_updates/Anasa Ayatan Scultpture.json.i
+data/queued_updates/Lith S3 Exceptional.json.i
+data/items/Sheev Set.json.i
+data/items/Jolt.json.i
+data/items/Ash Prime Set.json.i
+data/items/Volt Prime Chassis.json.i
+data/queued_updates/Neo V2 Intact.json.i
+data/items/Zodiac Shred.json.i
+data/queued_updates/Axi C2 Radiant.json.i
+data/items/Sharpened Blade.json.i
+data/items/Boar Prime Set.json.i
+data/items/Carrier Prime Blueprint.json.i
+data/queued_updates/Lith B1 Radiant.json.i
+data/queued_updates/Banshee Prime Systems.json.i
+data/items/Stretch.json.i
+data/queued_updates/Meso V4 Relic.json.i
+data/items/Zenurik Lens.json.i
+data/items/Shotgun Spazz.json.i
+data/items/Burston Prime Blueprint.json.i
+data/items/Soma Prime Set.json.i
+data/items/Amesha Set.json.i
+data/queued_updates/Transistor Shield.json.i
+data/items/Axi N3 Exceptional.json.i
+data/items/Arcane Eruption.json.i
+data/queued_updates/Axi R1 Exceptional.json.i
+data/items/Duality.json.i
+data/items/Frigid Blast.json.i
+data/items/Hushed Invisibility.json.i
+data/items/Lith M1 Radiant.json.i
+data/queued_updates/Meso S4 Exceptional.json.i
+data/items/Serrated Edges.json.i
+data/items/Odonata Prime Wings.json.i
+data/items/Sicarus Prime Barrel.json.i
+data/items/Depleted Reload.json.i
+data/items/Nekros Prime Chassis.json.i
+data/sub_icons/ornament_128x128.png.i
+data/items/Loose Magazine.json.i
+data/items/Carrier Prime Systems.json.i
+data/updates/Valkyr.json.i
+data/queued_updates/Lith S3 Flawless.json.i
+data/items/Path of Statues.json.i
+data/items/Lith A1 Intact.json.i
+data/queued_updates/Gorgon Wraith Set.json.i
+data/queued_updates/Aklex Prime Blueprint.json.i
+data/items/Scindo Prime Blade.json.i
+data/items/Bane of Infested.json.i
+data/items/Focused Defense.json.i
+data/items/Peaceful Provocation.json.i
+data/items/Axi N2 Intact.json.i
+data/items/Medi-Pet Kit.json.i
+data/updates/EnduringAffliction.json.i
+data/queued_updates/Meso F1 Radiant.json.i
+data/items/Lith S1 Radiant.json.i
+data/items/Silent Battery.json.i
+data/items/Speed Drift.json.i
+data/items/Fluctus Limbs.json.i
+data/items/Corvas Receiver.json.i
+data/items/Crash Course.json.i
+data/items/Finishing Touch.json.i
+data/items/Meso C1 Intact.json.i
+data/items/Vectis Prime Barrel.json.i
+data/items/Reflex Guard.json.i
+data/items/Neo N2 Flawless.json.i
+data/items/Lith V1 Exceptional.json.i
+data/items/Everlasting Ward.json.i
+data/items/Tempo Royale.json.i
+data/items/Loki Prime Systems.json.i
+data/items/Nekros Prime Blueprint.json.i
+data/queued_updates/Meso F1 Exceptional.json.i
+data/queued_updates/Toxin Resistance.json.i
+data/items/Rebound.json.i
+data/queued_updates/Axi H1 Intact.json.i
+data/items/Blood Rush.json.i
+data/queued_updates/Amaryn's Retreat Scene.json.i
+data/items/Hydraulic Chamber.json.i
+data/items/Final Harbinger.json.i
+data/items/Orthos Prime Blade.json.i
+data/items/Reaper Prime Blueprint.json.i
+data/items/Firequake.json.i
+data/items/Recover.json.i
+data/items/Neo V1 Exceptional.json.i
+data/items/Grim Fury.json.i
+data/items/Quickdraw.json.i
+data/items/Overcharged.json.i
+data/items/Dera Vandal Barrel.json.i
+data/items/Phaedra Set.json.i
+data/items/Meso F2 Flawless.json.i
+data/items/Sweeping Serration.json.i
+data/items/Lasting Sting.json.i
+data/items/Ammo Drum.json.i
+data/items/Primed Cryo Rounds.json.i
+data/queued_updates/Meso N3 Exceptional.json.i
+data/items/Point Blank.json.i
+data/items/Tear Gas.json.i
+data/items/Centaur Aegis.json.i
+data/items/Stand United.json.i
+data/items/Charm.json.i
+data/items/Lith S1 Flawless.json.i
+data/items/Machete Wraith.json.i
+data/items/Primed Ravage.json.i
+data/items/Primed Continuity.json.i
+data/items/Lith G1 Flawless.json.i
+data/items/Axi N1 Flawless.json.i
+data/queued_updates/Lith C1 Flawless.json.i
+data/items/Galatine Prime Blade.json.i
+data/items/Kavasa Prime Collar Buckle.json.i
+data/items/Burston Prime Stock.json.i
+data/items/Iron Vault.json.i
+data/items/Ghost.json.i
+data/items/Meso S3 Exceptional.json.i
+data/items/Justice Blades.json.i
+data/items/Tactical Reload.json.i
+data/queued_updates/Lith S4 Intact.json.i
+data/items/Life Strike.json.i
+data/items/Vaporize.json.i
+data/items/Meso V2 Flawless.json.i
+data/queued_updates/Lunaro Arena Scene.json.i
+data/items/Armored Acrobatics.json.i
+data/items/Lingering Torment.json.i
+data/items/Bo Prime Set.json.i
+data/queued_updates/Voltage Sequence.json.i
+data/items/Serration.json.i
+data/items/Agility Drift.json.i
+data/items/Arbiters of Hexis Augment Mod.json.i
+data/items/Redirection.json.i
+data/items/Bleeding Edge.json.i
+data/queued_updates/Lith K1 Radiant.json.i
+data/queued_updates/Neo T1 Flawless.json.i
+data/queued_updates/Neo V2 Flawless.json.i
+data/items/Full Contact.json.i
+data/items/Fang Prime Blueprint.json.i
+data/items/Reaping Spiral.json.i
+data/items/Arcane Awakening.json.i
+data/items/Cernos Prime Lower Limb.json.i
+data/queued_updates/Axi V3 Intact.json.i
+data/queued_updates/Lith N2 Flawless.json.i
+data/items/Soma Prime Barrel.json.i
+data/items/Magma Chamber.json.i
+data/items/Hikou Prime Pouch.json.i
+data/queued_updates/Axi C1 Intact.json.i
+data/queued_updates/Delta Beacon.json.i
+data/items/Narrow Minded.json.i
+data/items/Equilibrium.json.i
+data/queued_updates/Lith N3 Flawless.json.i
+data/items/Vauban Prime Systems.json.i
+data/items/Brutal Tide.json.i
+data/queued_updates/Negation Swarm.json.i
+data/items/Full Capacity.json.i
+data/items/Lith F1 Intact.json.i
+data/updates/RelentlessCombination.json.i
+data/items/Velocitus Receiver.json.i
+data/items/Elytron Set.json.i
+data/queued_updates/Meso S5 Flawless.json.i
+data/items/Lith S2 Radiant.json.i
+data/queued_updates/Axi B2 Intact.json.i
+data/items/Loyal Companion.json.i
+data/sub_icons/avionics_128x128.png.i
+data/items/Tainted Mag.json.i
+data/items/Voltaic Strike.json.i
+data/items/Coiling Viper.json.i
+data/updates/ConditionOverload.json.i
+data/items/Dakra Prime Set.json.i
+data/sub_icons/stars_128x128.png.i
+data/items/Wraith Twin Vipers Blueprint.json.i
+data/queued_updates/Meso M1 Radiant.json.i
+data/sub_icons/link_128x128.png.i
+data/items/Regenerative Molt.json.i
+data/items/Warm Coat.json.i
+data/items/Tidal Impunity.json.i
+data/queued_updates/Meso N3 Radiant.json.i
+data/items/Neo V4 Exceptional.json.i
+data/items/Marathon.json.i
+data/queued_updates/Meso F1 Flawless.json.i
+data/items/Meso V1 Intact.json.i
+data/queued_updates/Neo V4 Flawless.json.i
+data/items/Arrow Mutation.json.i
+data/items/Directed Convergence.json.i
+data/items/Scindo Prime Handle.json.i
+data/queued_updates/Lith N1 Radiant.json.i
+data/items/Decisive Judgement.json.i
+data/items/Seeking Fury.json.i
+data/items/Rending Strike.json.i
+data/items/Nyx Prime Set.json.i
+data/items/Braton Prime Stock.json.i
+data/items/Jet Stream.json.i
+data/items/Chilling Reload.json.i
+data/items/Perpetual Vortex.json.i
+data/items/Ferocity.json.i
+data/items/Meteor Crash.json.i
+data/items/Spira Prime Blueprint.json.i
+data/items/Wraith Twin Vipers Receivers.json.i
+data/items/Link Health.json.i
+data/items/Axi V4 Exceptional.json.i
+data/items/Malicious Raptor.json.i
+data/items/Karak Wraith Receiver.json.i
+data/items/Meso C2 Exceptional.json.i
+data/items/Nezha Systems Blueprint.json.i
+data/items/Ice Spring.json.i
+data/queued_updates/Axi V3 Radiant.json.i
+data/items/Amber Ayatan Star.json.i
+data/items/Bronco Prime Barrel.json.i
+data/items/Magnum Force.json.i
+data/items/Coolant Leak.json.i
+data/items/Ancient Fusion Core.json.i
+data/items/Patagium.json.i
+data/items/Eternal War.json.i
+data/items/Arcane Avenger.json.i
+data/queued_updates/Beguiling Lantern.json.i
+data/queued_updates/Oberon Prime Systems.json.i
+data/items/Safeguard Switch.json.i
+data/items/Vaykor Hek.json.i
+data/items/Point Strike.json.i
+data/sub_icons/neuroptics_128x128.png.i
+data/queued_updates/Neo B3 Flawless.json.i
+data/items/Smite Corpus.json.i
+data/items/Hemlock Saryn Helmet.json.i
+data/items/Primed Slip Magazine.json.i
+data/items/Primed Bane of Infested.json.i
+data/queued_updates/Kappa Beacon.json.i
+data/queued_updates/Proboscis.json.i
+data/items/Crimson Dervish.json.i
+data/queued_updates/Meso S5 Intact.json.i
+data/items/Comet Rounds.json.i
+data/queued_updates/Neutralizing Justice.json.i
+data/queued_updates/Axi E1 Intact.json.i
+data/items/Orthos Prime Handle.json.i
+data/items/Broad Eye.json.i
+data/items/Armored Recovery.json.i
+data/items/Tempered Bound.json.i
+data/queued_updates/Neo T1 Exceptional.json.i
+data/items/Hornet Strike.json.i
+data/items/Breach Loader.json.i
+data/items/Neo S3 Radiant.json.i
+data/queued_updates/Lith S6 Intact.json.i
+data/items/Enhanced Vitality.json.i
+data/items/Focus Energy.json.i
+data/items/Iron Shrapnel.json.i
+data/queued_updates/Lith G1 Exceptional.json.i
+data/items/Stalking Fan.json.i
+data/items/Latron Wraith Blueprint.json.i
+data/items/Bullet Dance.json.i
+data/items/Eject Magazine.json.i
+data/updates/Syndicates.json.i
+data/items/Feathered Arrows.json.i
+data/items/Ankyros Prime Set.json.i
+data/items/Creeping Terrify.json.i
+data/items/Volt Prime Systems.json.i
+data/changes/Relics.json.i
+data/items/Avalon Excalibur Helmet.json.i
+data/items/Backdraft Ember Helmet.json.i
+data/items/Primed Bane of Grineer.json.i
+data/queued_updates/Lith N1 Intact.json.i
+data/items/Handspring.json.i
+data/items/Boar Prime Barrel.json.i
+data/queued_updates/Lith A2 Flawless.json.i
+data/items/Territorial Aggression.json.i
+data/queued_updates/Meso V3 Intact.json.i
+data/items/Sawtooth Clip.json.i
+data/items/Hunt.json.i
+data/items/Meso C2 Radiant.json.i
+data/items/Skull Shots (Viper).json.i
+data/items/Hydraulic Gauge.json.i
+data/items/Gorgon Frenzy.json.i
+data/items/Hellfire.json.i
+data/queued_updates/Axi H2 Flawless.json.i
+data/items/Arcane Warmth.json.i
+data/items/Axi K1 Exceptional.json.i
+data/items/Vectis Prime Stock.json.i
+data/queued_updates/Astral Autopsy.json.i
+data/updates/Relics.json.i
+data/items/Fleeting Expertise.json.i
+data/items/Guided Ordinance.json.i
+data/items/Akstiletto Prime Set.json.i
+data/items/Orta Ayatan Sculpture.json.i
+data/items/Hollow Point.json.i
+data/items/Pathogen Rounds.json.i
+data/queued_updates/Lith K1 Exceptional.json.i
+data/items/Concealed Explosives.json.i
+data/items/Drifting Contact.json.i
+data/items/Animal Instinct.json.i
+data/items/Sancti Castanas.json.i
+data/items/Neo N2 Exceptional.json.i
+data/items/Intensify.json.i
+data/items/Gleaming Blight.json.i
+data/queued_updates/Helminth Ferocity.json.i
+data/items/Latron Prime Barrel.json.i
+data/items/Jagged Edge.json.i
+data/items/Collision Force.json.i
+data/items/Lightning Rod.json.i
+data/items/Hell's Chamber.json.i
+data/updates/SaviorDecoy.json.i
+data/items/Arcane Resistance.json.i
+data/items/Amesha Wings.json.i
+data/items/North Wind.json.i
+data/items/Pendragon Excalibur Helmet.json.i
+data/items/Perpetual Agony.json.i
+data/queued_updates/Lith N3 Intact.json.i
+data/items/Trinity Prime Blueprint.json.i
+data/items/Agkuza Blade.json.i
+data/items/Lith F1 Radiant.json.i
+data/items/Maim.json.i
+data/items/Lith F2 Flawless.json.i
+data/queued_updates/Meso O1 Intact.json.i
+data/items/Dig.json.i
+data/items/Paris Prime Lower Limb.json.i
+data/items/Neo S2 Radiant.json.i
+data/queued_updates/Lith C1 Exceptional.json.i
+data/queued_updates/Pistol Riven Mod (Veiled).json.i
+data/items/Sure Footed.json.i
+data/items/Cat's Eye.json.i
+data/items/Fang Prime Blade.json.i
+data/items/Volt Prime Neuroptics.json.i
+data/queued_updates/Gorgon Wraith Blueprint.json.i
+data/items/Lith S2 Exceptional.json.i
+data/items/Axi K1 Radiant.json.i
+data/items/Mag Prime Neuroptics.json.i
+data/items/Muzzle Flash.json.i
+data/items/Prisma Tetra.json.i
+data/items/Shred.json.i
+data/items/Neo N3 Intact.json.i
+data/items/Quanta Vandal.json.i
+data/items/Glaive Prime Blueprint.json.i
+data/items/Hysterical Fixation.json.i
+data/items/Lightning Dash.json.i
+data/queued_updates/Prisma Obex.json.i
+data/items/Lie In Wait.json.i
+data/items/Cyngas Receiver.json.i
+data/items/Explosive Legerdemain.json.i
+data/queued_updates/Ergo's Boardroom Scene.json.i
+data/items/Bo Prime Ornament.json.i
+data/items/Thumper.json.i
+data/items/Shotgun Ammo Mutation.json.i
+data/items/High Noon.json.i
+data/items/Axi N2 Radiant.json.i
+data/README.md.i
+data/queued_updates/Shotgun Riven Mod (Veiled).json.i
+data/items/Latron Prime Receiver.json.i
+data/queued_updates/Tether Grenades.json.i
+data/queued_updates/Neo S5 Exceptional.json.i
+data/queued_updates/Lith S4 Exceptional.json.i
+data/queued_updates/Axi E2 Intact.json.i
+data/items/Gemini Cross.json.i
+data/items/Corroding Barrage.json.i
+data/queued_updates/Meso N4 Flawless.json.i
+data/items/Galatine Prime Blueprint.json.i
+data/items/Rime Rounds.json.i
+data/items/Sharpened Claws.json.i
+data/items/Primed Pistol Gambit.json.i
+data/items/Medi-Ray.json.i
+data/items/Rhino Prime Chassis.json.i
+data/items/Calculated Redirection.json.i
+data/items/Maul.json.i
+data/queued_updates/Lith V3 Flawless.json.i
+data/items/Shimmering Blight.json.i
+data/items/Greedy Pull.json.i
+data/items/War Blade.json.i
+data/items/Fatal Teleport.json.i
+data/items/Physique.json.i
+data/queued_updates/Axi H1 Flawless.json.i
+data/items/Shattering Impact.json.i
+data/items/Ash Prime Blueprint.json.i
+data/items/Snipetron Vandal Stock.json.i
+data/items/Bronco Prime Set.json.i
+data/items/Fracturing Wind.json.i
+data/items/Axi A1 Intact.json.i
+data/items/Braton Prime Set.json.i
+data/items/Razor Shot.json.i
+data/items/Kaszas Set.json.i
+data/items/Split Chamber.json.i
+data/items/Relentless Assault.json.i
+data/items/Momentary Pause.json.i
+data/queued_updates/Lith B1 Exceptional.json.i
+data/items/Trinity Prime Set.json.i
+data/items/Primed Heavy Trauma.json.i
+data/items/Orthos Prime Set.json.i
+data/queued_updates/Meso V5 Flawless.json.i
+data/queued_updates/Axi H2 Exceptional.json.i
+data/queued_updates/Ambush Optics (Rubico).json.i
+data/queued_updates/Neo S5 Intact.json.i
+data/items/Stabilizer.json.i
+data/items/Hyperion Thrusters.json.i
+data/items/Hallowed Reckoning.json.i
+data/queued_updates/Silva & Aegis Prime Hilt.json.i
+data/items/Retrieve.json.i
+data/items/Shield Disruption.json.i
+data/items/Freeze Force.json.i
+data/queued_updates/Axi B2 Radiant.json.i
+data/items/Primed Morphic Transformer.json.i
+data/queued_updates/Axi B1 Exceptional.json.i
+data/items/Repelling Bastille.json.i
+data/items/Covert Lethality.json.i
+data/items/Piercing Hit.json.i
+data/queued_updates/Lith V3 Radiant.json.i
+data/items/Kavasa Prime Collar Blueprint.json.i
+data/queued_updates/Smite Corrupted.json.i
+data/items/Gleaming Talon.json.i
+data/items/Defiled Snapdragon.json.i
+data/items/Fatal Acceleration.json.i
+data/items/Discharge Strike.json.i
+data/items/Toxic Barrage.json.i
+data/items/Maglev.json.i
+data/items/Volt Prime Set.json.i
+data/items/Shock Absorbers.json.i
+data/items/Cold Snap.json.i
+data/items/Phoenix Ember Helmet.json.i
+data/items/Tigris Prime Receiver.json.i
+data/items/Scimitar Set.json.i
+data/items/Prolonged Paralysis.json.i
+data/items/Fury.json.i
+data/items/Thrak Rhino Helmet.json.i
+data/items/Aura Trinity Helmet.json.i
+data/items/Axi G1 Radiant.json.i
+data/items/Axi N3 Intact.json.i
+data/items/Telos Akbolto.json.i
+data/items/Lith G1 Radiant.json.i
+data/queued_updates/Meso S4 Radiant.json.i
+data/items/Overview.json.i
+data/items/Neo A1 Radiant.json.i
+data/items/Telos Boltace.json.i
+data/items/Martial Fury.json.i
+data/items/Quickening.json.i
+data/items/Clashing Forest.json.i
+data/items/Arcane Ultimatum.json.i
+data/items/Arcane Arachne.json.i
+data/items/Boltor Prime Stock.json.i
+data/items/Primed Fast Hands.json.i
+data/updates/ReinforcingStomp.json.i
+data/items/Unairu Lens.json.i
+data/queued_updates/Silva & Aegis Prime Blade.json.i
+data/queued_updates/Aklex Prime Set.json.i
+data/items/Acid Shells.json.i
+data/items/Swipe.json.i
+data/items/Axi E1 Radiant.json.i
+data/items/Axi C1 Radiant.json.i
+data/queued_updates/Neo A1 Intact.json.i
+data/items/Rifle Amp.json.i
+data/items/Vasto Prime Set.json.i
+data/items/Neo S5 Flawless.json.i
+data/items/Meso B1 Intact.json.i
+data/queued_updates/Sybaris Prime Set.json.i
+data/items/Prova Vandal.json.i
+data/items/Reaper Prime Blade.json.i
+data/items/Axi V1 Flawless.json.i
+data/items/Lith F2 Intact.json.i
+data/items/Boar Prime Blueprint.json.i
+data/items/Loki Prime Neuroptics.json.i
+data/items/Pressure Point.json.i
+data/queued_updates/Lith S4 Radiant.json.i
+data/items/Axi V2 Flawless.json.i
+data/items/Telos Boltor.json.i
+data/items/Shell Compression.json.i
+data/items/Neo A1 Exceptional.json.i
+data/items/Cernos Prime String.json.i
+data/items/Odonata Prime Systems.json.i
+data/items/Lith F1 Exceptional.json.i
+data/queued_updates/Static Alacrity (Staticor).json.i
+data/items/Spring-Loaded Chamber.json.i
+data/queued_updates/Oberon Prime Blueprint.json.i

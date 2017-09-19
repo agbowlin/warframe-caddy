@@ -1,0 +1,29 @@
+{
+    "_id": "591844575c170664fbd37eb2",
+    "tags": [
+        "set",
+        "rifle"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "gorgon_wraith_set",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Gorgon Wraith Set",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

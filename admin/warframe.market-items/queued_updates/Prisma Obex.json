@@ -1,0 +1,28 @@
+{
+    "_id": "590e255197a0add8e9d5da4b",
+    "tags": [
+        "void trader"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "prisma_obex",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Prisma Obex",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

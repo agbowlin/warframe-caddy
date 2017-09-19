@@ -1,0 +1,29 @@
+{
+    "_id": "588247dcefa102dc532bd503",
+    "tags": [
+        "mod",
+        "tonfas"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "sovereign_outcast",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Sovereign Outcast",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": "Rare",
+    "mod_max_rank": 3,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

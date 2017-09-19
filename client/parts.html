@@ -88,7 +88,7 @@
 						<tr>
 							<th ng-hide="(member_data == null)">Owned</th>
 							<th>Name</th>
-							<th>Source</th>
+							<th>Tax</th>
 							<th>Value (d)</th>
 						</tr>
 					</thead>
@@ -96,11 +96,11 @@
 						<tr ng-repeat="item in parts_list">
 							<td ng-hide="(member_data == null)">{{ member_data.items[item.name].item_owned }}</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.part_name )">{{ item.part_name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.part_name }}</p>
+								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.part_name )">{{ item.name }}</a>
+								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
 							</td>
-							<td>{{ item.part_source }}</td>
-							<td>{{ item.part_ducat_value }}</td>
+							<td>{{ item.trade_tax }}</td>
+							<td>{{ item.value_ducats }}</td>
 						</tr>
 					</tbody>
 				</table>

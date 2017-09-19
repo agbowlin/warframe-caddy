@@ -1,0 +1,29 @@
+{
+    "_id": "58dbcc9e70b42255d6321e8e",
+    "tags": [
+        "mod",
+        "helminth charger"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "proboscis",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Proboscis",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": "Rare",
+    "mod_max_rank": 5,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

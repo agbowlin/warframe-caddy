@@ -1,0 +1,28 @@
+{
+    "_id": "58d8f22a11efe42a5e5231ff",
+    "tags": [
+        "void trader"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "vulkar_wraith",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Vulkar Wraith",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

@@ -1,0 +1,29 @@
+{
+    "_id": "58b57068eb26db5c31192118",
+    "tags": [
+        "set",
+        "sentinel"
+    ],
+    "icon": null,
+    "sub_icon": null,
+    "url_name": "helios_prime_blueprint",
+    "tradable": true,
+    "en": {
+        "description": "",
+        "drop": [],
+        "item_name": "Helios Prime Blueprint",
+        "codex": "",
+        "wiki_link": ""
+    },
+    "ru": {
+        "description": "",
+        "drop": [],
+        "item_name": "",
+        "wiki_link": ""
+    },
+    "rarity": null,
+    "mod_max_rank": null,
+    "mastery_level": null,
+    "ducats": null,
+    "trading_tax": null
+}

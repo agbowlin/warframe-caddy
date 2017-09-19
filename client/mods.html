@@ -86,23 +86,17 @@
 				<table id="mods_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
+							<th ng-hide="(member_data == null)">Owned</th>
 							<th>Name</th>
-							<th>Source</th>
-							<th>Rarity</th>
-							<th>Applies</th>
-							<th>Description</th>
-							<th>Transmutability</th>
+							<th>Tax</th>
 							<th>Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in mods_list">
-							<td>{{ item.mod_name }}</td>
-							<td>{{ item.mod_source }}</td>
-							<td>{{ item.mod_rarity }}</td>
-							<td>{{ item.mod_applies_to }}</td>
-							<td>{{ item.mod_description }}</td>
-							<td>{{ item.mod_transmutability }}</td>
+							<td ng-hide="(member_data == null)">{{ member_data.items[item.name].item_owned }}</td>
+							<td>{{ item.name }}</td>
+							<td>{{ item.trade_tax }}</td>
 							<td>{{ member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
