@@ -30,19 +30,11 @@ var ClientFolder = npm_path.resolve(__dirname, '../client');
 // var ItemsFolder = npm_path.resolve(__dirname, 'Items');
 
 // Load and Configure the Membership interface.
-var lib_Membership = require('./lib_Membership.js');
-lib_Membership.RootFolder = npm_path.resolve(__dirname, '../members');
-
-// Load and Configure the Item Database interface.
-// var lib_ItemsDB = require('./lib_ItemsDB.js');
-// lib_ItemsDB.RootFolder = npm_path.resolve(__dirname, '../items');
-
-
-// Command Line
-
-if (process.argv.length > 2) {
-	NodeJS_Port = process.argv[2];
-}
+// var Membership = require('./Membership.js');
+var Membership = require('liquicode_membership');
+var Membership_SocketIO = require('liquicode_membership/Membership-SocketIO.js');
+Membership.RootFolder = npm_path.resolve(__dirname, '../members');
+Membership.ApplicationName = 'warframe-caddy';
 
 
 //=====================================================================
@@ -139,133 +131,41 @@ SocketIo.on('connection',
 				HttpSockets.splice(HttpSockets.indexOf(Socket), 1);
 			});
 
-
-		//=====================================================================
-		//	Member Signup
-		//=====================================================================
-
-		Socket.on('member_signup_request',
-			function(MemberName, MemberEmail, MemberPassword) {
-				try {
-					var member_data = lib_Membership.NewMember(MemberName, MemberEmail, MemberPassword);
-					Socket.emit('member_signup_response', member_data);
-				}
-				catch (err) {
-					console.error('Error in [member_signup_request]: ', err);
-					Socket.emit('server_error', '[SERVER ERROR] ' + err.message);
-				}
-			});
-
-
-		//=====================================================================
-		//	Member Login
-		//=====================================================================
-
-		Socket.on('member_login_request',
-			function(MemberName, MemberEmail, MemberPassword) {
-				try {
-					var member_data = lib_Membership.GetMemberData(MemberName);
-					Socket.emit('member_login_response', member_data);
-				}
-				catch (err) {
-					console.error('Error in [member_login_request]: ', err);
-					Socket.emit('server_error', '[SERVER ERROR] ' + err.message);
-				}
-			});
-
-
-		//=====================================================================
-		//	Member Data
-		//=====================================================================
-
-		Socket.on('member_data_request',
-			function(MemberName) {
-				try {
-					var member_data = lib_Membership.GetMemberData(MemberName);
-					Socket.emit('member_data_response', member_data);
-				}
-				catch (err) {
-					console.error('Error in [member_data_request]: ', err);
-					Socket.emit('server_error', '[SERVER ERROR] ' + err.message);
-				}
-			});
-
-		Socket.on('get_member_data_request',
-			function(MemberName) {
-				try {
-					var member_data = lib_Membership.GetMemberData(MemberName);
-					Socket.emit('get_member_data_response', member_data);
-				}
-				catch (err) {
-					console.error('Error in [get_member_data_request]: ', err);
-					Socket.emit('server_error', '[SERVER ERROR] ' + err.message);
-				}
-			});
-
-		Socket.on('put_member_data_request',
-			function(MemberData) {
-				try {
-					var success = lib_Membership.PutMemberData(MemberData);
-					Socket.emit('update_member_data_response', success);
-				}
-				catch (err) {
-					console.error('Error in [member_data_request]: ', err);
-					Socket.emit('server_error', '[SERVER ERROR] ' + err.message);
-				}
-			});
-
+		// ==========================================
+		// Membership functions.
+		Membership_SocketIO.WireSocketEvents(Membership, Socket, null);
 
 		//=====================================================================
 		//	List Items
 		//=====================================================================
 
 		Socket.on('list_items_request',
-			function(ItemType) {
+			function(ItemType, IndexOnly) {
 				var response = {};
 				try {
 
-					// response.item_type = ItemType;
-					// ItemType = ItemType.toLowerCase();
-					// var file_content = '';
-					// if (ItemType == 'warframe') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/warframes.json');
-					// }
-					// else if (ItemType == 'primary weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-primary.json');
-					// }
-					// else if (ItemType == 'secondary weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-secondary.json');
-					// }
-					// else if (ItemType == 'melee weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-melee.json');
-					// }
-					// else if (ItemType == 'archwing primary weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-primary.json');
-					// }
-					// else if (ItemType == 'archwing melee weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-archwing-melee.json');
-					// }
-					// else if (ItemType == 'sentinel weapon') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/weapons-sentinel.json');
-					// }
-					// else if (ItemType == 'void relic') {
-					// 	file_content = npm_fs.readFileSync('../admin/warframe.wikia.data/void-relics.json');
-					// }
-					// else if (ItemType == 'gear part') {
-					// 	file_content = npm_fs.readFileSync('../admin/tennodrops.data/parts.json');
-					// }
-					// else if (ItemType == 'mod') {
-					// 	file_content = npm_fs.readFileSync('../admin/tennodrops.data/mods.json');
-					// }
-					// response.data = JSON.parse(file_content);
-
-					var items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-data.json'));
+					var items = [];
 					var selected_items = [];
-					items.forEach(item => {
-						if (item.item_type == ItemType) {
-							selected_items.push(item);
-						}
-					});
+					
+					if(IndexOnly)
+					{
+						items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-index.json'));
+					}
+					else
+					{
+						items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-data.json'));
+					}
+					
+					if (ItemType) {
+						items.forEach(item => {
+							if (item.item_type == ItemType) {
+								selected_items.push(item);
+							}
+						});
+					}
+					else {
+						selected_items = items;
+					}
 
 					response.item_type = ItemType;
 					response.data = selected_items;
@@ -333,6 +233,16 @@ function broadcast(event, data) {
 //
 //=====================================================================
 //=====================================================================
+
+
+// NodeJS startup settings.
+var NodeJS_Address = process.env.IP || "0.0.0.0";
+var NodeJS_Port = process.env.PORT || 3000;
+
+// Check override settings from command line parameters.
+if (process.argv.length > 2) {
+	NodeJS_Port = process.argv[2];
+}
 
 
 //==========================================

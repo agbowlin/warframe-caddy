@@ -48,19 +48,13 @@
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<!--<img alt="Brand" src="...">-->
-						My Warframe
+						My Warframe > Relics
 					</a>
 				</div>
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="">
-						> Relics
-					</a>
-				</div>
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
 					<p class="navbar-text">
-						[ {{ member_name }} ]
+						[ {{ Member.member_name }} ]
 					</p>
 				</ul>
 
@@ -102,17 +96,23 @@
 							<td>{{ item.relic_name }}</td>
 							<td>
 								<ul>
-									<li ng-repeat="drop in item.common">{{ drop }}</li>
+									<li ng-repeat="drop in item.common">
+										<span class="common-item">{{ drop }}</span>
+									</li>
 								</ul>
 							</td>
 							<td>
 								<ul>
-									<li ng-repeat="drop in item.uncommon">{{ drop }}</li>
+									<li ng-repeat="drop in item.uncommon">
+										<span class="uncommon-item">{{ drop }}</span>
+									</li>
 								</ul>
 							</td>
 							<td>
 								<ul>
-									<li ng-repeat="drop in item.rare">{{ drop }}</li>
+									<li ng-repeat="drop in item.rare">
+										<span class="rare-item">{{ drop }}</span>
+									</li>
 								</ul>
 							</td>
 						</tr>
@@ -126,8 +126,8 @@
 				<h3>Select Relics</h3>
 
 				<ul class="nav nav-pills">
-					<li><a class="disabled">Relic Tier :</a></li>
-					<li><a data-toggle="pill" ng-click="SelectRelicTier('Lith')">Lith</a></li>
+					<!--<li class="disabled"><a>Relic Tier :</a></li>-->
+					<li class="active"><a data-toggle="pill" ng-click="SelectRelicTier('Lith')">Lith</a></li>
 					<li><a data-toggle="pill" ng-click="SelectRelicTier('Meso')">Meso</a></li>
 					<li><a data-toggle="pill" ng-click="SelectRelicTier('Neo')">Neo</a></li>
 					<li><a data-toggle="pill" ng-click="SelectRelicTier('Axi')">Axi</a></li>
@@ -157,22 +157,30 @@
 						<th>Common</th>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_1.common">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_1.common">
+									<span class="common-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_2.common">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_2.common">
+									<span class="common-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_3.common">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_3.common">
+									<span class="common-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_4.common">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_4.common">
+									<span class="common-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 					</tr>
@@ -180,22 +188,30 @@
 						<th>Uncommon</th>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_1.uncommon">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_1.uncommon">
+									<span class="uncommon-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_2.uncommon">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_2.uncommon">
+									<span class="uncommon-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_3.uncommon">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_3.uncommon">
+									<span class="uncommon-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_4.uncommon">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_4.uncommon">
+									<span class="uncommon-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 					</tr>
@@ -203,22 +219,30 @@
 						<th>Rare</th>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_1.rare">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_1.rare">
+									<span class="rare-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_2.rare">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_2.rare">
+									<span class="rare-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_3.rare">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_3.rare">
+									<span class="rare-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li ng-repeat="drop in selected_relic_4.rare">{{ drop }}</li>
+								<li ng-repeat="drop in selected_relic_4.rare">
+									<span class="rare-item">{{ drop }}</span>
+								</li>
 							</ul>
 						</td>
 					</tr>
@@ -227,7 +251,11 @@
 				<h4>All Rewards</h4>
 
 				<ul>
-					<li ng-repeat="reward in selected_relic_rewards">{{ reward }}</li>
+					<li ng-repeat="reward in selected_relic_rewards">
+						<span class="common-item" ng-hide="reward.type != 'common'" ng-cloak>{{ reward.reward }}</span>
+						<span class="uncommon-item" ng-hide="reward.type != 'uncommon'" ng-cloak>{{ reward.reward }}</span>
+						<span class="rare-item" ng-hide="reward.type != 'rare'" ng-cloak>{{ reward.reward }}</span>
+					</li>
 				</ul>
 
 			</div>
@@ -313,6 +341,7 @@
 		-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,6 +1,7 @@
 /* global $ */
 /* global io */
 /* global angular */
+/* global MembershipClient */
 
 
 var module = angular.module('MyWarframeApp', ['ngCookies']);
@@ -35,34 +36,35 @@ module.controller('GearController',
 		//=====================================================================
 		//=====================================================================
 		//
-		//		Member Data
+		//		Membership
 		//
 		//=====================================================================
 		//=====================================================================
 
 
+		$scope.Member = MembershipClient.GetMember('warframe-caddy', socket, $cookies);
+
+
 		//==========================================
-		$scope.member_data_request = function member_data_request(MemberName) {
-			$scope.notice = "Retrieving membership data ...";
-			$scope.errors = [];
-			socket.emit('member_data_request', MemberName);
+		$scope.Member.OnGetMemberData = function(Success) {
+			if (!Success) { return; }
+			$scope.$apply();
+			return;
+		};
+
+		//==========================================
+		$scope.Member.OnPutMemberData = function(Success) {
+			if (!Success) { return; }
 			return;
 		};
 
 
 		//==========================================
-		socket.on('member_data_response', function(MemberData) {
-			if (!MemberData) {
-				$scope.notice = "Unable to retrieve membership data.";
-				$scope.$apply();
-				return;
-			}
-			$scope.notice = "Retrieved membership data for [" + MemberData.member_name + "].";
-			$scope.member_data = MemberData;
-			$scope.member_name = MemberData.member_name;
-			$scope.$apply();
-			return;
-		});
+		// Get the user data if our login is cached.
+		if ($scope.Member.member_logged_in && !$scope.Member.member_data) {
+			// $scope.Member.GetMemberData();
+			$scope.Member.MemberReconnect();
+		}
 
 
 		//=====================================================================
@@ -99,8 +101,8 @@ module.controller('GearController',
 				// Construct a lookup array of gear parts.
 				var part_values = [];
 				for (var index = 0; index < $scope.parts_list.length; index++) {
-					if ($scope.parts_list[index].part_ducat_value) {
-						part_values[$scope.parts_list[index].part_name] = $scope.parts_list[index].part_ducat_value;
+					if ($scope.parts_list[index].value_ducats) {
+						part_values[$scope.parts_list[index].name] = $scope.parts_list[index].value_ducats;
 					}
 				}
 
@@ -138,6 +140,8 @@ module.controller('GearController',
 					}
 				}
 
+				$scope.SelectRelicTier('Lith');
+				
 				$scope.$apply();
 
 				// Initialize the datatable.
@@ -169,20 +173,34 @@ module.controller('GearController',
 			$scope.selected_relic_4 = null;
 			$scope.selected_relic_rewards = null;
 
-			$scope.$apply();
 			return;
 		};
+
+
+		// //==========================================
+		// function _AppendUniqueArray(A1, A2) {
+		// 	for (var index = 0; index < A2.length; index++) {
+		// 		if (A1.indexOf(A2[index]) < 0) {
+		// 			A1.push(A2[index]);
+		// 		}
+		// 	}
+		// 	return;
+		// };
 
 
 		//==========================================
-		function _AppendUniqueArray(A1, A2) {
-			for (var index = 0; index < A2.length; index++) {
-				if (A1.indexOf(A2[index]) < 0) {
-					A1.push(A2[index]);
+		function build_rewards_list(AllRewards, RelicRewards, RewardType) {
+			for (var index = 0; index < RelicRewards.length; index++) {
+				var intersection = AllRewards.find(function(item) { return RelicRewards[index] == item.reward; });
+				if (!intersection) {
+					AllRewards.push({
+						reward: RelicRewards[index],
+						type: RewardType
+					});
 				}
 			}
 			return;
-		};
+		}
 
 
 		//==========================================
@@ -191,32 +209,37 @@ module.controller('GearController',
 			$scope.selected_relic_rewards = [];
 
 			if ($scope.selected_relic_1) {
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_1.common);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_1.uncommon);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_1.rare);
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_1.common, 'common');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_1.uncommon, 'uncommon');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_1.rare, 'rare');
 			}
 
 			if ($scope.selected_relic_2) {
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_2.common);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_2.uncommon);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_2.rare);
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_2.common, 'common');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_2.uncommon, 'uncommon');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_2.rare, 'rare');
 			}
 
 			if ($scope.selected_relic_3) {
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_3.common);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_3.uncommon);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_3.rare);
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_3.common, 'common');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_3.uncommon, 'uncommon');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_3.rare, 'rare');
 			}
 
 			if ($scope.selected_relic_4) {
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_4.common);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_4.uncommon);
-				_AppendUniqueArray($scope.selected_relic_rewards, $scope.selected_relic_4.rare);
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_4.common, 'common');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_4.uncommon, 'uncommon');
+				build_rewards_list($scope.selected_relic_rewards, $scope.selected_relic_4.rare, 'rare');
 			}
 
-			$scope.selected_relic_rewards.sort();
+			$scope.selected_relic_rewards.sort(
+				function(A, B) {
+					if (A.reward < B.reward) { return -1; }
+					else if (A.reward > B.reward) { return 1; }
+					else { return 0; }
+				});
 
-			$scope.$apply();
+			// $scope.$apply();
 			return;
 		};
 
@@ -228,6 +251,42 @@ module.controller('GearController',
 		//
 		//=====================================================================
 		//=====================================================================
+
+
+		//==========================================
+		$scope.get_ensure_item = function get_ensure_item(ItemName) {
+			var item = $scope.Member.member_data.items[ItemName];
+			if (!item) {
+				item = {
+					item_level: 0,
+					item_owned: 0
+				};
+				$scope.Member.member_data.items[ItemName] = item;
+			}
+			return item;
+		};
+
+
+		//==========================================
+		$scope.change_item_owned_count = function change_item_owned_count(ItemName, Amount) {
+			var item = $scope.get_ensure_item(ItemName);
+			var n = parseInt(item.item_owned, 10);
+			n = n + Amount;
+			if (n < 0) { n = 0; }
+			item.item_owned = n;
+			return;
+		};
+
+
+		//==========================================
+		$scope.change_item_owned_level = function change_item_owned_level(ItemName, Amount) {
+			var item = $scope.get_ensure_item(ItemName);
+			var n = parseInt(item.item_level, 10);
+			n = n + Amount;
+			if (n < 0) { n = 0; }
+			item.item_level = n;
+			return;
+		};
 
 
 		//==========================================
@@ -260,8 +319,7 @@ module.controller('GearController',
 
 		$scope.notice = "";
 		$scope.errors = [];
-		$scope.member_data = null;
-		$scope.member_name = null;
+
 		$scope.item_list = null;
 		$scope.current_item = null;
 
@@ -275,17 +333,6 @@ module.controller('GearController',
 		$scope.selected_relic_3 = null;
 		$scope.selected_relic_4 = null;
 		$scope.selected_relic_rewards = null;
-
-		//==========================================
-		//	Setup Member Data
-		//==========================================
-
-		// Get the member info from a browser cookie.
-		$scope.member_name = $cookies.get('my-warframe.member_name');
-		if ($scope.member_name) {
-			// Retrieve the member data from the server.
-			$scope.member_data_request($scope.member_name);
-		}
 
 		// Initialize the item list.
 		$scope.list_items_request("Gear Part");

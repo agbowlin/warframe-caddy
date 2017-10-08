@@ -46,6 +46,7 @@
 	{
 		"express": "",
 		"socket.io": "",
+		"liquicode_membership": "",
 		"string": "",
 		"sanitize-filename": "",
 		"warframe-worldstate-parser": ""

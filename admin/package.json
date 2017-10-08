@@ -3,6 +3,9 @@
 	"dependencies": {
 		"jquery": "",
 		"liquicode_dev_common": "",
-		"liqui-logger": ""
+		"liqui-logger": "",
+		"command-line-args": "",
+		"command-line-usage": "",
+		"jsondiffpatch": ""
 	}
 }

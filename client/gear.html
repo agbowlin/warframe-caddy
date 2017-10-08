@@ -48,22 +48,22 @@
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<!--<img alt="Brand" src="...">-->
-						My Warframe
+						My Warframe > Gear
 					</a>
 				</div>
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="">
-						> Gear
-					</a>
-				</div>
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
 					<p class="navbar-text">
-						[ {{ member_name }} ]
+						[ {{ Member.member_name }} ]
 					</p>
 				</ul>
 
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
+					<a class="navbar-text" href="#" ng-click="Member.PutMemberData()">
+						Save Changes
+					</a>
+				</ul>
+				
 			</div>
 		</nav>
 
@@ -80,9 +80,10 @@
 
 		<ul class="nav nav-pills">
 
+			<li><a href="#search_gear_pane" data-toggle="pill">Search Gear</a></li>
 			<li><a href="#all_gear_pane" data-toggle="pill">All Gear</a></li>
-			
-			<li class="dropdown">
+
+			<li class="dropdown active">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Warframes<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="#warframes_pane" data-toggle="pill">Warframes</a></li>
@@ -114,14 +115,120 @@
 
 		<div class="container-fluid tab-content" ng-cloak>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Search Gear
+			=====================================================================
+			-->
 
-			<div class="row tab-pane" id="all_gear_pane" data-toggle="pill">
-				<h3>All Gear</h3>
-				<h5>... Under Construction ...</h5>
+			<div class="row tab-pane" id="search_gear_pane" data-toggle="pill">
+
+				<h3>Search Gear</h3>
+				<table id="search_gear_list" class="item-list-table" width="100%">
+					<thead>
+						<tr>
+							<th ng-hide="(Member.member_data == null)">Level</th>
+							<th>Name</th>
+							<th></th>
+							<th>Type</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in all_gear_list" ng-hide="$('#search_gear_pane .dataTables_filter') == ''">
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
+							</td>
+							<td>{{ item.item_type }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				All Gear
+			=====================================================================
+			-->
+
+			<div class="row tab-pane" id="all_gear_pane" data-toggle="pill">
+
+				<h3>All Gear</h3>
+				<table id="all_gear_list" class="item-list-table" width="100%">
+					<thead>
+						<tr>
+							<th ng-hide="(Member.member_data == null)">Level</th>
+							<th>Name</th>
+							<th></th>
+							<th>Type</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in all_gear_list">
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
+							</td>
+							<td>{{ item.item_type }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<!--
+			=====================================================================
+				Warframes
+			=====================================================================
+			-->
 
 			<div class="row tab-pane active" id="warframes_pane" data-toggle="pill">
 
@@ -129,22 +236,44 @@
 				<table id="warframes_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Health</th>
 							<th>Shields</th>
 							<th>Energy</th>
 							<th>Armor</th>
 							<th>Sprint</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in warframes_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<!--<td>-->
 							<!--	<a class="item-name" href="http://warframe.wikia.com/{{ item.link }}" target="1">-->
@@ -156,35 +285,51 @@
 							<td>{{ item.energy }}</td>
 							<td>{{ item.armor }}</td>
 							<td>{{ item.sprint }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Archwings
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="archwings_pane" data-toggle="pill">
 				<h3>Archwings</h3>
 				<h5>... Under Construction ...</h5>
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Sentinels
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="sentinels_pane" data-toggle="pill">
 				<h3>Sentinels</h3>
 				<h5>... Under Construction ...</h5>
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Companions
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="companions_pane" data-toggle="pill">
 				<h3>Companions</h3>
 				<h5>... Under Construction ...</h5>
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Primary Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="primary_weapons_pane" data-toggle="pill">
 
@@ -192,8 +337,9 @@
 				<table id="primary_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Critical</th>
 							<th>Status</th>
@@ -203,15 +349,36 @@
 							<th>Mag</th>
 							<th>Reload</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in primary_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.critical_chance }} ({{ item.critical_damage }})</td>
@@ -222,14 +389,18 @@
 							<td>{{ item.magazine_size }}</td>
 							<td>{{ item.reload_time }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Secondary Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="secondary_weapons_pane" data-toggle="pill">
 
@@ -237,8 +408,9 @@
 				<table id="secondary_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Critical</th>
 							<th>Status</th>
@@ -248,15 +420,36 @@
 							<th>Mag</th>
 							<th>Reload</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in secondary_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.critical_chance }} ({{ item.critical_damage }})</td>
@@ -267,14 +460,18 @@
 							<td>{{ item.magazine_size }}</td>
 							<td>{{ item.reload_time }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Archwing Primary Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="archwing_primary_weapons_pane" data-toggle="pill">
 
@@ -282,8 +479,9 @@
 				<table id="archwing_primary_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Critical</th>
 							<th>Status</th>
@@ -293,15 +491,36 @@
 							<th>Mag</th>
 							<th>Reload</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in archwing_primary_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.critical_chance }} ({{ item.critical_damage }})</td>
@@ -312,14 +531,18 @@
 							<td>{{ item.magazine_size }}</td>
 							<td>{{ item.reload_time }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Sentinel Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="sentinel_weapons_pane" data-toggle="pill">
 
@@ -327,8 +550,9 @@
 				<table id="sentinel_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Critical</th>
 							<th>Status</th>
@@ -338,15 +562,36 @@
 							<th>Mag</th>
 							<th>Reload</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in sentinel_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.critical_chance }} ({{ item.critical_damage }})</td>
@@ -357,14 +602,18 @@
 							<td>{{ item.magazine_size }}</td>
 							<td>{{ item.reload_time }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Melee Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="melee_weapons_pane" data-toggle="pill">
 
@@ -372,23 +621,45 @@
 				<table id="melee_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Slide</th>
 							<th>Critical</th>
 							<th>Status</th>
 							<th>Speed</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in melee_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.slide }}</td>
@@ -396,14 +667,18 @@
 							<td>{{ item.status_chance }}</td>
 							<td>{{ item.attack_speed }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-			<!--=====================================================================-->
+			<!--
+			=====================================================================
+				Archwing Melee Weapons
+			=====================================================================
+			-->
 
 			<div class="row tab-pane" id="archwing_melee_weapons_pane" data-toggle="pill">
 
@@ -411,23 +686,45 @@
 				<table id="archwing_melee_weapons_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th>Level</th>
+							<th ng-hide="(Member.member_data == null)">Level</th>
 							<th>Name</th>
+							<th></th>
 							<th>Damage</th>
 							<th>Slide</th>
 							<th>Critical</th>
 							<th>Status</th>
 							<th>Speed</th>
 							<th>Mastery</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in archwing_melee_weapons_list">
-							<td>{{ member_data.items[item.name].item_level }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_level }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_level(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_level(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_level }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
 							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
 							</td>
 							<td>{{ item.damage }}</td>
 							<td>{{ item.slide }}</td>
@@ -435,7 +732,7 @@
 							<td>{{ item.status_chance }}</td>
 							<td>{{ item.attack_speed }}</td>
 							<td>{{ item.mastery_rank }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -456,34 +753,32 @@
 		-->
 
 		<div id="item_view_modal" class="modal fade" role="dialog" tabindex='-1'>
-			<div class="modal-dialog modal-lg">
+			<div class="modal-dialog modal-md">
 
 				<div class="modal-content">
 
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<h2 class="modal-title item-name">{{ current_item_name }}</h2>
+						<p>{{ current_item.item_type }}</p>
+						<a href="{{ 'https://warframe.wikia.com' + current_item.link }}" target="_blank">Wikia Link</a>
 					</div>
 
 					<div class="modal-body">
-						<table width="100%">
-							<tr>
-								<th>Owned</th>
-								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_owned"></td>
-							</tr>
+						<table width="80%">
 							<tr>
 								<th>Level</th>
-								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_level"></td>
+								<td><input type="text" class="form-control" ng-model="Member.member_data.items[current_item_name].item_level"></td>
 							</tr>
 							<tr>
 								<th>Notes</th>
-								<td><textarea rows="3" class="form-control" ng-model="member_data.items[current_item_name].notes"></textarea></td>
+								<td><textarea rows="3" class="form-control" ng-model="Member.member_data.items[current_item_name].notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
 
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" ng-click="put_member_data_request()" data-dismiss="modal">Save</button>
+						<button type="button" class="btn btn-default" ng-click="Member.PutMemberData()" data-dismiss="modal">Save</button>
 						<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
 					</div>
 
@@ -523,6 +818,7 @@
 		-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

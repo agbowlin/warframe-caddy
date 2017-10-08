@@ -1,6 +1,6 @@
 {
     "name": "warframe-caddy",
-    "version": "0.01.5",
+    "version": "0.01.6",
     "homepage": "",
     "description": "An inventory management application for the Warframe game.",
     "authors": [
@@ -14,7 +14,8 @@
     "license": "MIT",
     "private": true,
     "repository": {
-
+        "type": "git",
+        "url": "https://github.com/agbowlin/warframe-caddy.git"
     },
     "keywords": [
 
@@ -35,6 +36,7 @@
         "admin/_logs/",
         "admin/node_modules/",
         "admin/tennodrops.data/",
+        "admin/warframe.market-icons/",
         "admin/warframe.market-items/",
         "admin/warframe.wikia.data/",
         "client/node_modules/",

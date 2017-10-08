@@ -1,19 +1,23 @@
 /* global $ */
 /* global io */
 /* global angular */
+/* global MembershipClient */
 
 
 var app = angular.module('MyWarframeApp', ['ngCookies']);
-
 
 app.controller('MainController',
 	function MainController($scope, $cookies) {
 		var socket = io.connect();
 
 
-		//==========================================
-		//	Socket.IO Messages
-		//==========================================
+		//=====================================================================
+		//=====================================================================
+		//
+		//		Socket.IO Messages
+		//
+		//=====================================================================
+		//=====================================================================
 
 
 		//==========================================
@@ -22,6 +26,7 @@ app.controller('MainController',
 			$scope.$apply();
 		});
 
+		$scope.errors = [];
 
 		//==========================================
 		socket.on('server_error', function(server_error) {
@@ -36,157 +41,81 @@ app.controller('MainController',
 		//=====================================================================
 		//=====================================================================
 		//
-		//		Member Signup
+		//		Membership
 		//
 		//=====================================================================
 		//=====================================================================
 
 
-		//==========================================
-		$scope.member_signup_request = function member_signup_request(MemberName, MemberEmail, MemberPassword) {
-			if (!MemberName) {
-				$scope.notice = "No membership credentials provided.";
-				return;
-			}
-
-			$scope.notice = "Generating membership ...";
-			$scope.errors = [];
-			$scope.member_data = null;
-			$scope.member_name = null;
-			$scope.member_email = null;
-			$scope.member_password = null;
-
-			// Authenticate the member with the server.
-			socket.emit('member_signup_request', MemberName, MemberEmail, MemberPassword);
-			return;
-		};
+		// MembershipClient.WireMembership('warframe-caddy', $scope, socket, $cookies);
+		$scope.Member = MembershipClient.GetMember('warframe-caddy', socket, $cookies);
 
 
 		//==========================================
-		socket.on('member_signup_response', function(MemberData) {
-			if (!MemberData) {
-				$scope.notice = "Unable to retrieve membership data.";
-				$scope.$apply();
-				return;
-			}
-			$scope.notice = "Retrieved membership data for [" + MemberData.member_name + "].";
-			$scope.member_data = MemberData;
-			$scope.member_name = MemberData.member_name;
-			$scope.member_email = MemberData.member_email;
-			$scope.member_password = MemberData.member_password;
-			$cookies.put('my-warframe.member_name', $scope.member_name);
+		$scope.Member.OnMemberSignup = function(Success)
+		{
+			// if (!Success) { return; }
 			$scope.$apply();
 			return;
-		});
-
-
-		//==========================================
-		$scope.do_member_signup = function do_member_signup() {
-			$scope.member_signup_request($scope.member_name, $scope.member_email, $scope.member_password);
-			return;
 		};
 
-
-		//=====================================================================
-		//=====================================================================
-		//
-		//		Member Login
-		//
-		//=====================================================================
-		//=====================================================================
-
-
 		//==========================================
-		$scope.member_login_request = function member_login_request(MemberName, MemberEmail, MemberPassword) {
-			$scope.notice = "Authenticating membership credentials ...";
-			$scope.errors = [];
-			$scope.member_data = null;
-			$scope.member_name = null;
-			$scope.member_email = null;
-			$scope.member_password = null;
-			if (!MemberName) {
-				$scope.notice = "No membership credentials provided.";
-				return;
-			}
-
-			// Authenticate the member with the server.
-			socket.emit('member_login_request', MemberName, MemberEmail, MemberPassword);
-			return;
-		};
-
-
-		//==========================================
-		socket.on('member_login_response', function(MemberData) {
-			if (!MemberData) {
-				$scope.notice = "Unable to retrieve membership data.";
-				$scope.$apply();
-				return;
-			}
-			$scope.notice = "Retrieved membership data for [" + MemberData.member_name + "].";
-			$scope.member_data = MemberData;
-			$scope.member_name = MemberData.member_name;
-			$scope.member_email = MemberData.member_email;
-			$scope.member_password = MemberData.member_password;
-			$scope.item_list = null;
-			$cookies.put('my-warframe.member_name', $scope.member_name);
+		$scope.Member.OnMemberLogin = function(Success)
+		{
+			// if (!Success) { return; }
 			$scope.$apply();
 			return;
-		});
-
-
-		//==========================================
-		$scope.do_member_login = function do_member_login() {
-			$scope.member_login_request($scope.member_name, $scope.member_email, $scope.member_password);
-			return;
 		};
 
-
 		//==========================================
-		$scope.do_member_logout = function do_member_logout() {
-			$scope.notice = "Logging out ...";
-			$scope.member_data = null;
-			$scope.member_name = null;
-			$scope.member_email = null;
-			$scope.member_password = null;
-			$cookies.remove('my-warframe.member_name');
-			// $scope.$apply();
-			return;
-		};
-
-
-		//=====================================================================
-		//=====================================================================
-		//
-		//		Member Data
-		//
-		//=====================================================================
-		//=====================================================================
-
-
-		//==========================================
-		$scope.member_data_request = function member_data_request(MemberName) {
-			$scope.notice = "Retrieving membership data ...";
-			$scope.errors = [];
-			socket.emit('member_data_request', MemberName);
-			return;
-		};
-
-
-		//==========================================
-		socket.on('member_data_response', function(MemberData) {
-			if (!MemberData) {
-				$scope.notice = "Unable to retrieve membership data.";
-				$scope.$apply();
-				return;
-			}
-			$scope.notice = "Retrieved membership data for [" + MemberData.member_name + "].";
-			$scope.member_data = MemberData;
-			$scope.member_name = MemberData.member_name;
-			$scope.member_email = MemberData.member_email;
-			$scope.member_password = MemberData.member_password;
+		$scope.Member.OnMemberReconnect = function(Success)
+		{
+			// if (!Success) { return; }
 			$scope.$apply();
 			return;
-		});
+		};
+
+		//==========================================
+		$scope.Member.OnMemberLogout = function(Success)
+		{
+			// if (!Success) { return; }
+			$scope.$apply();
+			return;
+		};
+
+		//==========================================
+		$scope.Member.OnGetMemberData = function(Success)
+		{
+			// if (!Success) { return; }
+			$scope.$apply();
+			return;
+		};
+
+		//==========================================
+		$scope.Member.OnPutMemberData = function(Success)
+		{
+			// if (!Success) { return; }
+			return;
+		};
+
+
+		//==========================================
+		// Get the user data if our login is cached.
+		if ($scope.Member.member_logged_in && !$scope.Member.member_data)
+		{
+			// $scope.Member.GetMemberData();
+			$scope.Member.MemberReconnect();
+		}
+
+
+		//=====================================================================
+		//=====================================================================
+		//
+		//		Warframe Worldstate
+		//
+		//=====================================================================
+		//=====================================================================
+
 
 		//==========================================
 		$scope.get_worldstate_request = function get_worldstate_request() {
@@ -206,30 +135,6 @@ app.controller('MainController',
 			return;
 		});
 
-
-		//=====================================================================
-		//=====================================================================
-		//
-		//		App Startup
-		//
-		//=====================================================================
-		//=====================================================================
-
-		$scope.notice = "";
-		$scope.errors = [];
-		$scope.member_data = null;
-		$scope.member_name = null;
-
-		//==========================================
-		//	Setup Member Data
-		//==========================================
-
-		// Get the member info from a browser cookie.
-		$scope.member_name = $cookies.get('my-warframe.member_name');
-		if ($scope.member_name) {
-			// Retrieve the member data from the server.
-			$scope.member_data_request($scope.member_name);
-		}
 
 		//==========================================
 		//	Initialize Worldstate

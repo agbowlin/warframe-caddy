@@ -48,20 +48,20 @@
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<!--<img alt="Brand" src="...">-->
-						My Warframe
+						My Warframe > Parts
 					</a>
 				</div>
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="">
-						> Parts
-					</a>
-				</div>
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
 					<p class="navbar-text">
-						[ {{ member_name }} ]
+						[ {{ Member.member_name }} ]
 					</p>
+				</ul>
+
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
+					<a class="navbar-text" href="#" ng-click="Member.PutMemberData()">
+						Save Changes
+					</a>
 				</ul>
 
 			</div>
@@ -83,74 +83,58 @@
 			<div class="row">
 
 				<h3>Parts</h3>
+				<p>
+					Total ducat value: {{ total_ducat_value | number }}d
+				</p>
+
+				<div id="parts_list_parent"></div>
+
 				<table id="parts_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th ng-hide="(member_data == null)">Owned</th>
+							<th ng-hide="(Member.member_data == null)">Owned</th>
 							<th>Name</th>
+							<th>Applies To</th>
 							<th>Tax</th>
 							<th>Value (d)</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in parts_list">
-							<td ng-hide="(member_data == null)">{{ member_data.items[item.name].item_owned }}</td>
-							<td>
-								<a class="item-name" href="#" ng-hide="(member_data == null)" ng-click="select_current_item( item.part_name )">{{ item.name }}</a>
-								<p class="item-name" ng-hide="(member_data != null)">{{ item.name }}</p>
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_count(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_count(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_owned }}</span>
+										</td>
+									</tr>
+								</table>
 							</td>
-							<td>{{ item.trade_tax }}</td>
-							<td>{{ item.value_ducats }}</td>
+							<td>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ all_items_list[item.applies_to].link }}" ng-hide="!all_items_list[item.applies_to]">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
+								{{ item.applies_to }}
+							</td>
+							<td>{{ item.trade_tax | number }}</td>
+							<td>{{ item.value_ducats | number }}</td>
 						</tr>
 					</tbody>
 				</table>
 
 			</div>
 
-		</div>
-
-
-		<!--
-		==========================================
-		==========================================
-
-			Item View Window
-
-		==========================================
-		==========================================
-		-->
-
-		<div id="item_view_modal" class="modal fade" role="dialog" tabindex='-1'>
-			<div class="modal-dialog modal-lg">
-
-				<div class="modal-content">
-
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h2 class="modal-title item-name">{{ current_item_name }}</h2>
-					</div>
-
-					<div class="modal-body">
-						<table width="100%">
-							<tr>
-								<th>Owned</th>
-								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_owned"></td>
-							</tr>
-							<tr>
-								<th>Notes</th>
-								<td><textarea rows="3" class="form-control" ng-model="member_data.items[current_item_name].notes"></textarea></td>
-							</tr>
-						</table>
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" ng-click="put_member_data_request()" data-dismiss="modal">Save</button>
-						<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-					</div>
-
-				</div>
-
-			</div>
 		</div>
 
 
@@ -184,6 +168,7 @@
 		-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

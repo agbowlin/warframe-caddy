@@ -14,6 +14,7 @@ TODO
 	- [https://github.com/julmot/datatables.mark.js/](https://github.com/julmot/datatables.mark.js/)
 
 - Fix membership system.
+	- Authenticate.
  
 
 Description

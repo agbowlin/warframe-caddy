@@ -2,7 +2,8 @@
 	"name": "warframe-caddy-client",
 	"dependencies":
 	{
-		"socket.io-client": ""
+		"socket.io-client": "",
+		"liquicode_membership": ""
 	}
 
 }

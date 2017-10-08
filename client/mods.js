@@ -1,6 +1,7 @@
 /* global $ */
 /* global io */
 /* global angular */
+/* global MembershipClient */
 
 
 var module = angular.module('MyWarframeApp', ['ngCookies']);
@@ -35,34 +36,38 @@ module.controller('GearController',
 		//=====================================================================
 		//=====================================================================
 		//
-		//		Member Data
+		//		Membership
 		//
 		//=====================================================================
 		//=====================================================================
 
 
+		$scope.Member = MembershipClient.GetMember('warframe-caddy', socket, $cookies);
+
+
 		//==========================================
-		$scope.member_data_request = function member_data_request(MemberName) {
-			$scope.notice = "Retrieving membership data ...";
-			$scope.errors = [];
-			socket.emit('member_data_request', MemberName);
+		$scope.Member.OnGetMemberData = function(Success)
+		{
+			if (!Success) { return; }
+			$scope.$apply();
+			return;
+		};
+
+		//==========================================
+		$scope.Member.OnPutMemberData = function(Success)
+		{
+			if (!Success) { return; }
 			return;
 		};
 
 
 		//==========================================
-		socket.on('member_data_response', function(MemberData) {
-			if (!MemberData) {
-				$scope.notice = "Unable to retrieve membership data.";
-				$scope.$apply();
-				return;
-			}
-			$scope.notice = "Retrieved membership data for [" + MemberData.member_name + "].";
-			$scope.member_data = MemberData;
-			$scope.member_name = MemberData.member_name;
-			$scope.$apply();
-			return;
-		});
+		// Get the user data if our login is cached.
+		if ($scope.Member.member_logged_in && !$scope.Member.member_data)
+		{
+			// $scope.Member.GetMemberData();
+			$scope.Member.MemberReconnect();
+		}
 
 
 		//=====================================================================
@@ -110,6 +115,42 @@ module.controller('GearController',
 
 
 		//==========================================
+		$scope.get_ensure_item = function get_ensure_item(ItemName) {
+			var item = $scope.Member.member_data.items[ItemName];
+			if (!item) {
+				item = {
+					item_level: 0,
+					item_owned: 0
+				};
+				$scope.Member.member_data.items[ItemName] = item;
+			}
+			return item;
+		};
+
+
+		//==========================================
+		$scope.change_item_owned_count = function change_item_owned_count(ItemName, Amount) {
+			var item = $scope.get_ensure_item(ItemName);
+			var n = parseInt(item.item_owned, 10);
+			n = n + Amount;
+			if (n < 0) { n = 0; }
+			item.item_owned = n;
+			return;
+		};
+
+
+		//==========================================
+		$scope.change_item_owned_level = function change_item_owned_level(ItemName, Amount) {
+			var item = $scope.get_ensure_item(ItemName);
+			var n = parseInt(item.item_level, 10);
+			n = n + Amount;
+			if (n < 0) { n = 0; }
+			item.item_level = n;
+			return;
+		};
+
+
+		//==========================================
 		$scope.select_current_item = function select_current_item(ItemName) {
 			$scope.current_item_name = ItemName;
 			// $scope.$apply();
@@ -148,8 +189,7 @@ module.controller('GearController',
 
 		$scope.notice = "";
 		$scope.errors = [];
-		$scope.member_data = null;
-		$scope.member_name = null;
+
 		$scope.item_list = null;
 		$scope.current_item = null;
 
@@ -159,20 +199,9 @@ module.controller('GearController',
 		$scope.archwing_primary_weapons_list = null;
 		$scope.sentinel_weapons_list = null;
 
-		//==========================================
-		//	Setup Member Data
-		//==========================================
-
-		// Get the member info from a browser cookie.
-		$scope.member_name = $cookies.get('my-warframe.member_name');
-		if ($scope.member_name) {
-			// Retrieve the member data from the server.
-			$scope.member_data_request($scope.member_name);
-		}
-
 		// Initialize the item list.
 		$scope.list_items_request("Mod");
 		
-		$('li')
+//		$('li')
 
 	});

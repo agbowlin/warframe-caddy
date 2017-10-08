@@ -62,7 +62,7 @@ var casper_xpath = require('casper').selectXPath;
 //=====================================================================
 // Initialize the Logger.
 var Logger = require('liqui-logger/js/logger').Logger();
-Logger.Config.group = 'warframe.wikia.scrape';
+Logger.Config.group = '1.warframe.wikia.scrape';
 var console_log_target = Logger.AddLogTarget('console', 'TDIWEF');
 var file_log_target = Logger.AddLogTarget('file');
 file_log_target.log_path = '_logs';
@@ -82,15 +82,6 @@ var parsing = require('liquicode_dev_common/js/parsing');
 // casper.status(true);
 Logger.LogDebug("Casper CLI passed args:", casper.cli.args);
 Logger.LogDebug("Casper CLI passed options:", casper.cli.options);
-
-
-//=====================================================================
-// Parse the command line.
-// var data_filename = '';
-// if (casper.cli.has('data_filename')) {
-// 	data_filename = casper.cli.get('data_filename');
-// 	Logger.LogMessage('Using the data_filename [' + data_filename + '].');
-// }
 
 
 //=====================================================================

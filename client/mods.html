@@ -48,19 +48,13 @@
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<!--<img alt="Brand" src="...">-->
-						My Warframe
+						My Warframe > Mods
 					</a>
 				</div>
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="">
-						> Mods
-					</a>
-				</div>
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
+				<ul class="nav navbar-nav pull-right" ng-hide="!Member.member_logged_in" ng-cloak>
 					<p class="navbar-text">
-						[ {{ member_name }} ]
+						[ {{ Member.member_name }} ]
 					</p>
 				</ul>
 
@@ -86,18 +80,43 @@
 				<table id="mods_list" class="item-list-table" width="100%">
 					<thead>
 						<tr>
-							<th ng-hide="(member_data == null)">Owned</th>
+							<th ng-hide="(Member.member_data == null)">Owned</th>
 							<th>Name</th>
+							<th></th>
 							<th>Tax</th>
-							<th>Notes</th>
+							<th ng-hide="(Member.member_data == null)">Notes</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in mods_list">
-							<td ng-hide="(member_data == null)">{{ member_data.items[item.name].item_owned }}</td>
-							<td>{{ item.name }}</td>
+							<!--<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].item_owned }}</td>-->
+							<td ng-hide="(Member.member_data == null)">
+								<table class="flat-table">
+									<tr>
+										<td nowrap="true">
+											<span class="btn-xs inline-button-less" ng-click="change_item_owned_count(item.name, -1)">
+												<span class="glyphicon glyphicon-minus"></span>
+											</span>
+											<span class="btn-xs inline-button-more" ng-click="change_item_owned_count(item.name, 1)">
+												<span class="glyphicon glyphicon-plus"></span>
+											</span>
+										</td>
+										<td>
+											<span class="emphasis-text">{{ Member.member_data.items[item.name].item_owned }}</span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td>
+								{{ item.name }}
+							</td>
+							<td>
+								<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+									<img src="warframe-wikia.png" class="wikia-link">
+								</a>
+							</td>
 							<td>{{ item.trade_tax }}</td>
-							<td>{{ member_data.items[item.name].notes }}</td>
+							<td ng-hide="(Member.member_data == null)">{{ Member.member_data.items[item.name].notes }}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -118,7 +137,7 @@
 		-->
 
 		<div id="item_view_modal" class="modal fade" role="dialog" tabindex='-1'>
-			<div class="modal-dialog modal-lg">
+			<div class="modal-dialog modal-md">
 
 				<div class="modal-content">
 
@@ -131,21 +150,21 @@
 						<table width="100%">
 							<tr>
 								<th>Owned</th>
-								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_owned"></td>
+								<td><input type="text" class="form-control" ng-model="Member.member_data.items[current_item_name].item_owned"></td>
 							</tr>
 							<tr>
 								<th>Level</th>
-								<td><input type="text" class="form-control" ng-model="member_data.items[current_item_name].item_level"></td>
+								<td><input type="text" class="form-control" ng-model="Member.member_data.items[current_item_name].item_level"></td>
 							</tr>
 							<tr>
 								<th>Notes</th>
-								<td><textarea rows="3" class="form-control" ng-model="member_data.items[current_item_name].notes"></textarea></td>
+								<td><textarea rows="3" class="form-control" ng-model="Member.member_data.items[current_item_name].notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
 
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" ng-click="put_member_data_request()" data-dismiss="modal">Save</button>
+						<button type="button" class="btn btn-default" ng-click="Member.PutMemberData()" data-dismiss="modal">Save</button>
 						<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
 					</div>
 
@@ -185,6 +204,7 @@
 		-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

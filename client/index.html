@@ -59,28 +59,35 @@
 				</ul>
 
 
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
-					<l1>
-						<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="do_member_logout()">
-							Logout
-						</button>
-					</l1>
-				</ul>
+				<!--Show when the user IS NOT logged in-->
+				<div ng-hide="Member.member_logged_in" ng-cloak>
+					<ul class="nav navbar-nav pull-right">
+						<li class="bg-warning">
+							You are currently logged out
+						</li>
+						<l1>
+							<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="show_member_login_modal()">
+								Login
+							</button>
+						</l1>
+					</ul>
+				</div>
 
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name != null)" ng-cloak>
-					<l1>
-						<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="show_member_login_modal()">
-							Login
-						</button>
-					</l1>
-				</ul>
-
-				<ul class="nav navbar-nav pull-right" ng-hide="(member_name == null)" ng-cloak>
-					<p class="navbar-text">
-						[ {{ member_name }} ]
-					</p>
-				</ul>
+				<!--Show when the user IS logged in-->
+				<div ng-hide="!Member.member_logged_in" ng-cloak>
+					<ul class="nav navbar-nav pull-right">
+						<l1>
+							<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="Member.MemberLogout()">
+								Logout
+							</button>
+						</l1>
+					</ul>
+					<ul class="nav navbar-nav pull-right">
+						<p class="navbar-text">
+							[ {{ Member.member_name }} ]
+						</p>
+					</ul>
+				</div>
 
 			</div>
 		</nav>
@@ -139,6 +146,8 @@
 					<table class="item-list-table">
 						<tr>
 							<th>Time</th>
+						</tr>
+						<tr>
 							<td>
 								<div ng-hide="!worldstate.earthCycle.isDay" ng-cloak>
 									Daytime for {{ worldstate.earthCycle.timeLeft }}
@@ -148,16 +157,26 @@
 								</div>
 							</td>
 						</tr>
+					</table>
+					<table class="item-list-table">
 						<tr>
 							<th>Darvo</th>
-							<td>
-								{{ worldstate.dailyDeals[0].item }} (exp: {{ worldstate.dailyDeals[0].eta }})
-								<br>On sale for {{ worldstate.dailyDeals[0].salePrice }}p (original: {{ worldstate.dailyDeals[0].originalPrice }}p)
-								<br>Sold {{ worldstate.dailyDeals[0].sold }} / {{ worldstate.dailyDeals[0].total }}
-							</td>
 						</tr>
 						<tr>
+							<td>
+								<div class="alert-container">
+									<span class="emphasis-text">{{ worldstate.dailyDeals[0].item }}</span> (exp: {{ worldstate.dailyDeals[0].eta }})
+									<br>On sale for {{ worldstate.dailyDeals[0].salePrice }}p (original: {{ worldstate.dailyDeals[0].originalPrice }}p)
+									<br>Sold {{ worldstate.dailyDeals[0].sold }} / {{ worldstate.dailyDeals[0].total }}
+								</div>
+							</td>
+						</tr>
+					</table>
+					<table class="item-list-table">
+						<tr>
 							<th>Baro Ki'Teer</th>
+						</tr>
+						<tr>
 							<td>
 								{{ worldstate.voidTrader.location }}
 								<div ng_hide="worldstate.voidTrader.active">
@@ -165,11 +184,10 @@
 								</div>
 								<div ng_hide="!worldstate.voidTrader.active">
 									Leaving in {{ worldstate.voidTrader.endString }}
-									<ul>
-										<li ng-repeat="item in worldstate.voidTrader.inventory">
-											{{ item.name }}
-										</li>
-									</ul>
+									<div class="alert-container" ng-repeat="item in worldstate.voidTrader.inventory">
+										<span class="emphasis-text">{{ item.item }}</span>
+										<br>{{ item.ducats }}d + {{ item.credits }}c
+									</div>
 								</div>
 							</td>
 						</tr>
@@ -186,7 +204,7 @@
 								<div class="alert-container">
 									<strong>{{ alert.mission.type }}</strong> (exp: {{ alert.eta }})
 									<br> {{ alert.mission.node }}, {{ alert.mission.faction }} ({{ alert.mission.minEnemyLevel }}-{{ alert.mission.maxEnemyLevel }})
-									<br> {{ alert.mission.reward.asString }}
+									<br> <span class="emphasis-text">{{ alert.mission.reward.asString }}</span>
 									<div ng-hide="!alert.mission.archwingRequired">Archwing</div>
 									<div ng-hide="!alert.mission.nightmare">Nightmare</div>
 								</div>
@@ -203,7 +221,7 @@
 						<tr ng-repeat="fissure in worldstate.fissures">
 							<td>
 								<div class="alert-container">
-									<strong>{{ fissure.missionType }}</strong> (exp: {{ fissure.eta }})
+									<span class="emphasis-text">{{ fissure.missionType }}</span> (exp: {{ fissure.eta }})
 									<br> {{ fissure.node }}, {{ fissure.enemy }}
 									<br> {{ fissure.tier }}
 								</div>
@@ -228,38 +246,53 @@
 		-->
 
 		<div id="member_login_modal" class="modal fade" role="dialog">
-			<div class="modal-dialog modal-lg">
+			<div class="modal-dialog modal-md">
 
 				<div class="modal-content">
 
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Login</h2>
 					</div>
 
 					<div class="modal-body">
 
-						<div class="form-group">
-							<label class="" for="member_name">Member Name</label>
-							<input class="form-control" ng-model="member_name" id="ui_member_name" type="text">
-						</div>
-
-						<div class="form-group">
-							<label class="" for="member_email">Email Address</label>
-							<input class="form-control" ng-model="member_email" id="ui_member_email" type="text">
-						</div>
-
-						<div class="form-group">
-							<label class="" for="member_password">Password</label>
-							<input class="form-control" ng-model="member_password" id="ui_member_password" type="password">
-						</div>
-
-						<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="do_member_signup()">
-							Signup
-						</button>
-
-						<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="do_member_login()">
-							Login
-						</button>
+						<table>
+							<tr>
+								<td>
+									<label class="" for="member_name">Member Name</label>
+								</td>
+								<td>
+									<input class="form-control" ng-model="Member.member_name" id="ui_member_name" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="" for="member_password">Password</label>
+								</td>
+								<td>
+									<form class="form-inline">
+										<input class="form-control" ng-model="Member.member_password" id="ui_member_password" type="password">
+										<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="Member.MemberLogin()">
+											Login
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="" for="member_email">Email Address</label>
+								</td>
+								<td>
+									<form class="form-inline">
+										<input class="form-control" ng-model="Member.member_email" id="ui_member_email" type="text">
+										<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="Member.MemberSignup()">
+											Signup
+										</button>
+									</form>
+								</td>
+							</tr>
+						</table>
 
 					</div>
 
@@ -337,6 +370,7 @@
 		-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -347,6 +381,7 @@
 
 
 <script>
+	/* global $ */
 	/* global app */
 
 	// Add modal window activator functions.

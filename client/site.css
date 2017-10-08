@@ -86,10 +86,11 @@ table td {
 }
 
 .item-list-table td {
-	
+
 	/*border: 1px dotted darkgray;*/
 	border-width: 1px 1px 1px 1px;
-	border-color: #333 darkgray #333 darkgray;
+	/*border-color: #333 darkgray #333 darkgray;*/
+	border-color: #333;
 	border-top-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
@@ -118,6 +119,45 @@ div.dataTables_filter input {
 	background-color: #333;
 }
 
+.emphasis-text {
+	color: lightblue;
+	font-weight: bold;
+	/*font-size: 125%;*/
+}
+
+.common-item {
+	color: gray;
+}
+
+.lesscommon-item {
+	color: lightgray;
+}
+
+.uncommon-item {
+	color: white;
+}
+
+.rare-item {
+	color: yellow;
+}
+
+.inline-button-less,
+.inline-button-more {
+	color: darkgray;
+	background-color: #333;
+	border-color: #333 darkgray #333 darkgray;
+	margin: 0px 10px 0px 0px;
+	/*width: 20px;*/
+}
+
+/*.inline-button-more{}*/
+
+.flat-table td {
+	border-width: 0;
+	padding: 0px 0px 0px 0px !important;
+	margin: 0px 0px 0px 0px !important;
+}
+
 .data-detail-header {
 	font-weight: bold;
 }
@@ -125,6 +165,19 @@ div.dataTables_filter input {
 .data-detail-value {
 	font-size: 125%;
 }
+
+a {
+	text-decoration: none !important;
+}
+
+.wikia-link {
+	border: 3px solid transparent;
+}
+
+.wikia-link:hover {
+	border: 3px solid lightgray;
+}
+
 
 [ng\:cloak],
 [ng-cloak],

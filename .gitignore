@@ -3,6 +3,7 @@ members/*
 admin/_logs/
 admin/node_modules/
 admin/tennodrops.data/
+admin/warframe.market-icons/
 admin/warframe.market-items/
 admin/warframe.wikia.data/
 client/node_modules/
