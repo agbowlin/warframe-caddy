@@ -25,6 +25,7 @@ var npm_string = require('string');
 var NodeJS_Address = process.env.IP || "0.0.0.0";
 var NodeJS_Port = process.env.PORT || 3000;
 
+var DataFolder = npm_path.resolve(__dirname, '../admin/data');
 var ClientFolder = npm_path.resolve(__dirname, '../client');
 // var ProjectsFolder = npm_path.resolve(__dirname, 'projects');
 // var ItemsFolder = npm_path.resolve(__dirname, 'Items');
@@ -146,16 +147,16 @@ SocketIo.on('connection',
 
 					var items = [];
 					var selected_items = [];
-					
-					if(IndexOnly)
-					{
-						items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-index.json'));
+
+					if (IndexOnly) {
+						var filename = npm_path.join(DataFolder, 'all-items-index.json');
+						items = JSON.parse(npm_fs.readFileSync(filename));
 					}
-					else
-					{
-						items = JSON.parse(npm_fs.readFileSync('../admin/data/all-items-data.json'));
+					else {
+						var filename = npm_path.join(DataFolder, 'all-items-data.json');
+						items = JSON.parse(npm_fs.readFileSync(filename));
 					}
-					
+
 					if (ItemType) {
 						items.forEach(item => {
 							if (item.item_type == ItemType) {
