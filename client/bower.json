@@ -1,33 +1,10 @@
 {
-	"name": "my-warframe",
-	"version": "0.01.000",
-	"homepage": "",
-	"description": "An inventory management application for the Warframe game.",
-	"authors": [
-	{
-		"name": "Andre G. Bowlin",
-		"email": "agbowlin@gmail.com",
-		"homepage": "http://liquicode.com"
-	}],
-	"private": true,
-	"main": "client/index.html",
-	"moduleType": [
-		"globals"
-	],
-	"repository":
-	{},
-	"license": "MIT",
-	"keywords": [],
-	"ignore": [
-		".*",
-		"bower_components",
-		"node_modules"
-	],
-	"dependencies":
-	{
+	"name": "application-client",
+	"dependencies": {
 		"jquery": "",
 		"bootstrap": "",
 		"angular": "",
-		"angular-cookies": ""
+		"angular-cookies": "",
+		"rsvp": ""
 	}
 }

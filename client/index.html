@@ -4,403 +4,193 @@
 <head>
 
 	<!--
-		==========================================
-			Page Metadata
-		==========================================
-		-->
+	==========================================
+		Page Metadata
+	==========================================
+	-->
 
-	<title>My Warframe</title>
+	<title>Membership Admin</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<!--<link rel="stylesheet" href="/css/bootstrap-responsive.min.css">-->
+	<!--<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>-->
+	<!--<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">-->
 
-	<!-- Foundation CSS framework (Bootstrap and jQueryUI also supported) -->
-	<!--<link rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css'>-->
-	<!-- Font Awesome icons (Bootstrap, Foundation, and jQueryUI also supported) -->
-	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
-
-	<link href="site.css" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="app-client.css">
 
 </head>
 
-<body ng-app="MyWarframeApp">
 
-	<div class="container" ng-controller="MainController">
+<!--
+==========================================
+	Main App Scaffolding
+==========================================
+-->
 
+<body ng-app="TheApplication">
 
-		<!--
-		==========================================
-			Page Navigation Bar
-		==========================================
-		-->
+	<div ng-controller="TheController">
 
-		<nav class="navbar navbar-fixed-top navbar-default">
-			<div class="container-fluid">
+		<div class="wrapper">
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">
-						<!--<img alt="Brand" src="...">-->
-						My Warframe
-					</a>
-				</div>
+			<!--
+			==========================================
+			==========================================
+	
+				Sidebar
+	
+			==========================================
+			==========================================
+			-->
 
-				<ul class="nav navbar-nav pull-right">
-					<l1>
-						<button type="button" class="btn btn-default navbar-btn pull-right" ng-click="show_help_modal()">
-							Help
-						</button>
-					</l1>
-				</ul>
+			<nav id="sidebar" class="navbar navbar-default" ng-cloak>
 
+				<!-- Sidebar Header -->
+				<ul class="nav navbar-header sidebar-header">
 
-				<!--Show when the user IS NOT logged in-->
-				<div ng-hide="Member.member_logged_in" ng-cloak>
-					<ul class="nav navbar-nav pull-right">
-						<li class="bg-warning">
-							You are currently logged out
-						</li>
-						<l1>
-							<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="show_member_login_modal()">
-								Login
-							</button>
-						</l1>
-					</ul>
-				</div>
-
-				<!--Show when the user IS logged in-->
-				<div ng-hide="!Member.member_logged_in" ng-cloak>
-					<ul class="nav navbar-nav pull-right">
-						<l1>
-							<button class="btn btn-default navbar-btn pull-right" type="button" ng-click="Member.MemberLogout()">
-								Logout
-							</button>
-						</l1>
-					</ul>
-					<ul class="nav navbar-nav pull-right">
-						<p class="navbar-text">
-							[ {{ Member.member_name }} ]
-						</p>
-					</ul>
-				</div>
-
-			</div>
-		</nav>
-
-
-		<!--
-		==========================================
-		==========================================
-
-			Page Content
-
-		==========================================
-		==========================================
-		-->
-
-		<div class="container-fluid">
-
-			<div class="row">
-
-				<a href="gear.html" class="btn btn-primary main-button">
-					<img src="images/warframes.png">
-					<h3>Gear</h3>
-					<p>Warframe, Weapons, etc</p>
-				</a>
-
-				<a href="mods.html" class="btn btn-primary main-button">
-					<img src="images/mods.png">
-					<h3>Mods</h3>
-					<p>Mods, Mods, Mods</p>
-				</a>
-
-				<a href="relics.html" class="btn btn-primary main-button">
-					<img src="images/mods.png">
-					<h3>Relics</h3>
-					<p>Void Relics</p>
-				</a>
-
-				<a href="parts.html" class="btn btn-primary main-button">
-					<img src="images/all-items.png">
-					<h3>Parts</h3>
-					<p>Gear Parts</p>
-				</a>
-
-				<!--<a href="admin.html" class="btn btn-primary main-button" ng-hide="!(member_data.is_admin == true)">-->
-				<!--	<img class="" width="200px" src="images/admin.png">-->
-				<!--	<h3 class="">Admin</h3>-->
-				<!--	<p class="">Admin Functions</p>-->
-				<!--</a>-->
-
-			</div>
-			<div class="row" ng-hide="!worldstate" ng-cloak>
-
-				<h4>Worldstate</h4>
-
-				<div class="col-sm-4">
-					<table class="item-list-table">
-						<tr>
-							<th>Time</th>
-						</tr>
-						<tr>
-							<td>
-								<div ng-hide="!worldstate.earthCycle.isDay" ng-cloak>
-									Daytime for {{ worldstate.earthCycle.timeLeft }}
-								</div>
-								<div ng-hide="worldstate.earthCycle.isDay" ng-cloak>
-									Nighttime for {{ worldstate.earthCycle.timeLeft }}
-								</div>
-							</td>
-						</tr>
-					</table>
-					<table class="item-list-table">
-						<tr>
-							<th>Darvo</th>
-						</tr>
-						<tr>
-							<td>
-								<div class="alert-container">
-									<span class="emphasis-text">{{ worldstate.dailyDeals[0].item }}</span> (exp: {{ worldstate.dailyDeals[0].eta }})
-									<br>On sale for {{ worldstate.dailyDeals[0].salePrice }}p (original: {{ worldstate.dailyDeals[0].originalPrice }}p)
-									<br>Sold {{ worldstate.dailyDeals[0].sold }} / {{ worldstate.dailyDeals[0].total }}
-								</div>
-							</td>
-						</tr>
-					</table>
-					<table class="item-list-table">
-						<tr>
-							<th>Baro Ki'Teer</th>
-						</tr>
-						<tr>
-							<td>
-								{{ worldstate.voidTrader.location }}
-								<div ng_hide="worldstate.voidTrader.active">
-									Coming in {{ worldstate.voidTrader.startString }}
-								</div>
-								<div ng_hide="!worldstate.voidTrader.active">
-									Leaving in {{ worldstate.voidTrader.endString }}
-									<div class="alert-container" ng-repeat="item in worldstate.voidTrader.inventory">
-										<span class="emphasis-text">{{ item.item }}</span>
-										<br>{{ item.ducats }}d + {{ item.credits }}c
-									</div>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				<div class="col-sm-4">
-					<table class="item-list-table">
-						<tr>
-							<th>Alerts</th>
-						</tr>
-						<tr ng-repeat="alert in worldstate.alerts">
-							<td>
-								<div class="alert-container">
-									<strong>{{ alert.mission.type }}</strong> (exp: {{ alert.eta }})
-									<br> {{ alert.mission.node }}, {{ alert.mission.faction }} ({{ alert.mission.minEnemyLevel }}-{{ alert.mission.maxEnemyLevel }})
-									<br> <span class="emphasis-text">{{ alert.mission.reward.asString }}</span>
-									<div ng-hide="!alert.mission.archwingRequired">Archwing</div>
-									<div ng-hide="!alert.mission.nightmare">Nightmare</div>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				<div class="col-sm-4">
-					<table class="item-list-table">
-						<tr>
-							<th>Fissures</th>
-						</tr>
-						<tr ng-repeat="fissure in worldstate.fissures">
-							<td>
-								<div class="alert-container">
-									<span class="emphasis-text">{{ fissure.missionType }}</span> (exp: {{ fissure.eta }})
-									<br> {{ fissure.node }}, {{ fissure.enemy }}
-									<br> {{ fissure.tier }}
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-			</div>
-
-		</div>
-
-
-		<!--
-		==========================================
-		==========================================
-
-			Member Login Window
-
-		==========================================
-		==========================================
-		-->
-
-		<div id="member_login_modal" class="modal fade" role="dialog">
-			<div class="modal-dialog modal-md">
-
-				<div class="modal-content">
-
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h2 class="modal-title">Login</h2>
-					</div>
-
-					<div class="modal-body">
-
-						<table>
-							<tr>
-								<td>
-									<label class="" for="member_name">Member Name</label>
-								</td>
-								<td>
-									<input class="form-control" ng-model="Member.member_name" id="ui_member_name" type="text">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="" for="member_password">Password</label>
-								</td>
-								<td>
-									<form class="form-inline">
-										<input class="form-control" ng-model="Member.member_password" id="ui_member_password" type="password">
-										<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="Member.MemberLogin()">
-											Login
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="" for="member_email">Email Address</label>
-								</td>
-								<td>
-									<form class="form-inline">
-										<input class="form-control" ng-model="Member.member_email" id="ui_member_email" type="text">
-										<button class="btn btn-default" type="button" data-dismiss="modal" ng-click="Member.MemberSignup()">
-											Signup
-										</button>
-									</form>
-								</td>
-							</tr>
-						</table>
-
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-
-
-		<!--
-		==========================================
-		==========================================
-
-			Help Window
-
-		==========================================
-		==========================================
-		-->
-
-		<div id="help_modal" class="modal fade" role="dialog" tabindex='-1'>
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h2 class="modal-title">My Warframe Help</h2>
-					</div>
-
-					<div id="help_text" class="modal-body">
-
-						My Warframe is an inventory management application for the Warframe game.
-
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-
-		<!--
-		==========================================
-			Page Errors
-		==========================================
-		-->
-
-		<div class="container-fluid">
-			<div class="row">
-				<!--<hr ng-cloak>-->
-				<!--<h5 ng-cloak>{{ notice }}</h5>-->
-				<ul ng-cloak>
-					<li ng-repeat="error in errors" ng-bind="error">
+					<li class="nav navbar-nav navbar-right">
+						<a href="#" id="collapser-button" class="btn btn-default" ng-click="ThisApp.ToggleSidebarCollapsed()">
+							<i class="glyphicon glyphicon-menu-hamburger"></i>
+						</a>
 					</li>
-				</ul>
-				<!--<hr ng-cloak>-->
-			</div>
-		</div>
 
+					<li class="navbar-brand" ng-show="!ThisApp.IsSidebarCollapsed" ng-cloak>
+						{{ ThisApp.AppConfig.app_title }}
+						<i class="glyphicon glyphicon-send"></i>
+					</li>
+					
+				</ul>
+
+				<!-- Sidebar links, user is NOT logged in. -->
+
+				<ul class="nav navbar-nav sidebar-item-list" ng-show="!ThisApp.IsSidebarCollapsed">
+
+					<!-- Login link, user is NOT logged in. -->
+					<li class="sidebar-item" ng-hide="Member.member_logged_in" ng-cloak>
+						<a href="#" ng-click="ThisApp.LoadPartial('member-login')">
+							<i class="glyphicon glyphicon-log-in"></i>
+							Login
+						</a>
+					</li>
+
+					<!-- Signup link, user is NOT logged in. -->
+					<li class="sidebar-item" ng-hide="Member.member_logged_in" ng-cloak>
+						<a href="#" ng-click="ThisApp.LoadPartial('member-signup')">
+							<i class="glyphicon glyphicon-user"></i>
+							Signup
+						</a>
+					</li>
+
+					<!-- Profile link, user IS logged in. -->
+					<li class="sidebar-item" ng-hide="!Member.member_logged_in" ng-cloak>
+						<a href="#" ng-click="ThisApp.LoadPartial('member-profile')">
+							<i class="glyphicon glyphicon-user"></i>
+							Profile: {{ Member.member_name }}
+						</a>
+					</li>
+
+					<!-- Home link, Always shown. -->
+					<li class="sidebar-item">
+						<a href="#" class="sidebar-item" ng-click="ThisApp.LoadPartial('site-home')">
+							<i class="glyphicon glyphicon-home"></i>
+							Home
+						</a>
+					</li>
+
+				</ul>
+
+				<ul id="app-sidebar-list" class="nav navbar-nav sidebar-item-list" ng-show="!ThisApp.IsSidebarCollapsed">
+					<!-- App Content -->
+				</ul>
+
+			</nav>
+
+
+			<!--
+			==========================================
+			==========================================
+	
+				Page Errors
+	
+			==========================================
+			==========================================
+			-->
+
+			<!--<hr ng-cloak>-->
+			<!--<h5 ng-cloak>{{ Member.status_message }}</h5>-->
+			<!--<ul ng-cloak>-->
+			<!--	<li ng-repeat="error in errors" ng-bind="error">-->
+			<!--	</li>-->
+			<!--</ul>-->
+			<!--<hr ng-cloak>-->
+
+
+			<!--
+			==========================================
+			==========================================
+	
+				Page Content
+	
+			==========================================
+			==========================================
+			-->
+
+			<div id="content">
+				<div id="content-partial-container">
+				</div>
+			</div>
+
+
+		</div>
+		<!--container-->
 
 	</div>
+	<!--wrapper-->
+
+	</div>
+	<!--TheController-->
 
 </body>
 
+
 <!--
-		==========================================
-			Javascript Library Includes
-		==========================================
-		-->
+==========================================
+	Javascript Library Includes
+==========================================
+-->
 
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
 <script src="/node_modules/liquicode_membership/MembershipClient.js"></script>
+<script src="/node_modules/liquicode_membership/MembershipClient-RSVP.js"></script>
+<!--<script src="./MembershipClient.js"></script>-->
 
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/bower_components/angular/angular.min.js"></script>
 <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="/bower_components/rsvp/rsvp.min.js"></script>
+
+<!--
+==========================================
+	Load the scaffolding code
+==========================================
+-->
 
 <script src="/index.js"></script>
 
+<!--
+==========================================
+	Load the main application
+==========================================
+-->
+
+<link rel="import" href="app-client.html">
+<script src="/app-client.js"></script>
+
 
 <script>
-	/* global $ */
-	/* global app */
-
-	// Add modal window activator functions.
-	app.run(function($rootScope) {
-
-		//==========================================
-		$rootScope.show_member_login_modal = function show_member_login_modal() {
-			$('#member_login_modal').modal('show');
-			return;
-		}
-
-
-		//==========================================
-		$rootScope.show_help_modal = function show_help_modal() {
-			$('#help_modal').modal('show');
-			return;
-		}
-
-	});
 </script>
 
 </html>

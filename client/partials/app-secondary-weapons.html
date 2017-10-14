@@ -1,0 +1,77 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<span class="navbar-brand">
+				Secondary Weapons
+			</span>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li>
+					<button class="btn btn-success" ng-click="WarframeCaddy.PutItemUsage()" ng-show="WarframeCaddy.ItemUsageDirty" ng-cloak>
+						Save
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<table id="secondary_weapons_list" class="table item-list-table">
+	<thead>
+		<tr>
+			<th ng-show="Member.member_data">Level</th>
+			<th>Name</th>
+			<th></th>
+			<th>Damage</th>
+			<th>Critical</th>
+			<th>Status</th>
+			<th>Trigger</th>
+			<th>Projectile</th>
+			<th>Speed</th>
+			<th>Mag</th>
+			<th>Reload</th>
+			<th>Mastery</th>
+			<th ng-show="Member.member_data">Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in WarframeCaddy.SecondaryWeaponsList">
+			<td ng-show="Member.member_data">
+				<table class="flat-table" width="100%">
+					<tr>
+						<td nowrap="true">
+							<a href="#" class="btn-xs inline-button-less hover-link" ng-click="change_item_owned_level(item.name, -1)">
+								<span class="glyphicon glyphicon-minus"></span>
+							</a>
+							<a href="#" class="btn-xs inline-button-more hover-link" ng-click="change_item_owned_level(item.name, 1)">
+								<span class="glyphicon glyphicon-plus"></span>
+							</a>
+						</td>
+						<td width="100%" style="text-align:center">
+							<span class="emphasis-text">{{ WarframeCaddy.ItemUsage.items[item.name].item_level }}</span>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				{{ item.name }}
+			</td>
+			<td style="text-align:center">
+				<a target="blank" href="http://warframe.wikia.com/{{ item.link }}" ng-hide="!item.link">
+					<img src="images/warframe-wikia.png" class="hover-link">
+				</a>
+			</td>
+			<td>{{ item.damage }}</td>
+			<td>{{ item.critical_chance }} ({{ item.critical_damage }})</td>
+			<td>{{ item.status_chance }}</td>
+			<td>{{ item.trigger_type }}</td>
+			<td>{{ item.projectile_type }}</td>
+			<td>{{ item.fire_rate }}</td>
+			<td>{{ item.magazine_size }}</td>
+			<td>{{ item.reload_time }}</td>
+			<td>{{ item.mastery_rank }}</td>
+			<td ng-show="Member.member_data">{{ WarframeCaddy.ItemUsage.items[item.name].notes }}</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,125 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<span class="navbar-brand">
+				Worldstate
+			</span>
+		</div>
+	</div>
+</nav>
+
+<div class="col-sm-4">
+
+	<table class="table item-list-table">
+		<thead>
+			<tr>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div ng-show="ThisApp.WarframeCaddy.Worldstate.earthCycle.isDay" ng-cloak>
+						Daytime for {{ WarframeCaddy.Worldstate.earthCycle.timeLeft }}
+					</div>
+					<div ng-hide="ThisApp.WarframeCaddy.Worldstate.earthCycle.isDay" ng-cloak>
+						Nighttime for {{ WarframeCaddy.Worldstate.earthCycle.timeLeft }}
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table item-list-table">
+		<thead>
+			<tr>
+				<th>Darvo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="alert-container">
+						<span class="emphasis-text">{{ WarframeCaddy.Worldstate.dailyDeals[0].item }}</span> (exp: {{ WarframeCaddy.Worldstate.dailyDeals[0].eta }})
+						<br>On sale for {{ WarframeCaddy.Worldstate.dailyDeals[0].salePrice }}p (original: {{ WarframeCaddy.Worldstate.dailyDeals[0].originalPrice }}p)
+						<br>Sold {{ WarframeCaddy.Worldstate.dailyDeals[0].sold }} / {{ WarframeCaddy.Worldstate.dailyDeals[0].total }}
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table item-list-table">
+		<thead>
+			<tr>
+				<th>Baro Ki'Teer</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					{{ WarframeCaddy.Worldstate.voidTrader.location }}
+					<div ng_hide="WarframeCaddy.Worldstate.voidTrader.active">
+						Coming in {{ WarframeCaddy.Worldstate.voidTrader.startString }}
+					</div>
+					<div ng_hide="!WarframeCaddy.Worldstate.voidTrader.active">
+						Leaving in {{ WarframeCaddy.Worldstate.voidTrader.endString }}
+						<div class="alert-container" ng-repeat="item in WarframeCaddy.Worldstate.voidTrader.inventory">
+							<span class="emphasis-text">{{ item.item }}</span>
+							<br>{{ item.ducats }}d + {{ item.credits }}c
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+<div class="col-sm-4">
+
+	<table class="table item-list-table">
+		<thead>
+			<tr>
+				<th>Alerts</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="alert in WarframeCaddy.Worldstate.alerts">
+				<td>
+					<div class="alert-container">
+						<span class="emphasis-text">{{ alert.mission.type }}</span> (exp: {{ alert.eta }})
+						<br>{{ alert.mission.node }}, {{ alert.mission.faction }} ({{ alert.mission.minEnemyLevel }}-{{ alert.mission.maxEnemyLevel }})
+						<br><span class="emphasis-text">{{ alert.mission.reward.asString }}</span>
+						<div ng-show="alert.mission.archwingRequired">Archwing</div>
+						<div ng-show="alert.mission.nightmare">Nightmare</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+<div class="col-sm-4">
+
+	<table class="table item-list-table">
+		<thead>
+			<tr>
+				<th>Fissures</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="fissure in WarframeCaddy.Worldstate.fissures">
+				<td>
+					<div class="alert-container">
+						<span class="emphasis-text">{{ fissure.missionType }}</span> (exp: {{ fissure.eta }})
+						<br>{{ fissure.node }}, {{ fissure.enemy }}
+						<br><span class="emphasis-text">{{ fissure.tier }}</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

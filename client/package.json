@@ -1,9 +1,10 @@
 {
-	"name": "warframe-caddy-client",
-	"dependencies":
-	{
+	"name": "application-client",
+	"private": true,
+	"dependencies": {
 		"socket.io-client": "",
 		"liquicode_membership": ""
-	}
+	},
+	"devDependencies": {}
 
 }

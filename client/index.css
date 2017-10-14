@@ -1,0 +1,112 @@
+/* ---------------------------------------------------
+    GLOBAL STYLES
+----------------------------------------------------- */
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLES
+----------------------------------------------------- */
+
+
+.wrapper {
+	display: flex;
+	align-items: stretch;
+}
+
+#sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	transition: all 0.3s;
+}
+
+#sidebar.collapsed {
+	min-width: 50px;
+	max-width: 50px;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	text-align: center;
+}
+
+#sidebar.collapsed .sidebar-header {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#collapser-button{
+	font-size: 125%;
+	padding: 10px;
+}
+
+#sidebar .sidebar-header {
+	padding: 20px;
+}
+
+#sidebar .sidebar-item-list {
+	width: 100%;
+}
+
+#sidebar .sidebar-item {
+	width: 100%;
+	list-style-type: none;
+}
+
+#sidebar .sidebar-item a {
+	text-align: left;
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+
+#sidebar .sidebar-item a i {
+	margin-right: 10px;
+}
+
+a[data-toggle="collapse"] {
+	position: relative;
+}
+
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+	content: '\e259';
+	display: block;
+	position: absolute;
+	right: 20px;
+	font-family: 'Glyphicons Halflings';
+	font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+	content: '\e260';
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLES
+----------------------------------------------------- */
+
+
+#content {
+	padding: 20px;
+	min-height: 100vh;
+	transition: all 0.3s;
+}
+
+
+/*
+	=====================================================================
+	=====================================================================
+
+			AngularJS
+
+	=====================================================================
+	=====================================================================
+*/
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+	display: none !important;
+}

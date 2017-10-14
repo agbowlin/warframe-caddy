@@ -1,58 +1,15 @@
 {
-	"name": "warframe-caddy-server",
-	"version": "0.01.000",
-	"homepage": "",
-	"description": "An inventory management application for the Warframe game.",
-	"authors": [
-		{
-			"name": "Andre G. Bowlin",
-			"email": "agbowlin@gmail.com",
-			"homepage": "http://liquicode.com"
-		}
-	],
-
-	"private": true,
-
-	"main": "server.js",
-
-	"repository":
-	{},
-
-	"license": "MIT",
-
-	"keywords": [
-	],
-
-	"files": [
-		"package.json",
-		"bower.json",
-		"LICENSE",
-		"README.md",
-		"server.js",
-		"projectlib.js",
-		"client/*"
-	],
-
-	"ignore": [
-		".*",
-		"bower_components",
-		"node_modules",
-		"build",
-		"out",
-		"test"
-	],
-
-	"dependencies":
-	{
-		"express": "",
-		"socket.io": "",
-		"liquicode_membership": "",
-		"string": "",
-		"sanitize-filename": "",
-		"warframe-worldstate-parser": ""
-	},
-
-	"devDependencies":
-	{}
-
-}
+    "name": "application-server",
+    "private": true,
+    "dependencies":
+    {
+        "express": "",
+        "socket.io": "",
+        "string": "",
+        "sanitize-filename": "",
+        "fs-extra": "",
+        "liquicode_membership": "",
+        "warframe-worldstate-parser": ""
+    },
+    "devDependencies": {}
+    }

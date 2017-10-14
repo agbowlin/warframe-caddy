@@ -1,6 +1,6 @@
 {
     "name": "warframe-caddy",
-    "version": "0.2.2",
+    "version": "0.3.1",
     "homepage": "",
     "description": "An inventory management application for the Warframe game.",
     "authors": [
@@ -41,7 +41,8 @@
         "admin/warframe.wikia.data/",
         "client/node_modules/",
         "client/bower_components/",
-        "server/node_modules/"
+        "server/node_modules/",
+        "liquicode_scaffolding.git/"
     ],
     "dependencies": {
 

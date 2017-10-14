@@ -1,0 +1,160 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<span class="navbar-brand">
+				Fissure Mission
+			</span>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li>
+					<button class="btn btn-success" ng-click="WarframeCaddy.PutItemUsage()" ng-show="WarframeCaddy.ItemUsageDirty" ng-cloak>
+						Save
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<h3>Select Relics</h3>
+
+<ul class="nav nav-pills">
+	<li><a data-toggle="pill" ng-click="WarframeCaddy.SelectRelicTier('Lith')">Lith</a></li>
+	<li><a data-toggle="pill" ng-click="WarframeCaddy.SelectRelicTier('Meso')">Meso</a></li>
+	<li><a data-toggle="pill" ng-click="WarframeCaddy.SelectRelicTier('Neo')">Neo</a></li>
+	<li><a data-toggle="pill" ng-click="WarframeCaddy.SelectRelicTier('Axi')">Axi</a></li>
+</ul>
+
+<table class="table item-list-table">
+	<thead>
+		<tr>
+			<th width="20%">Relic ({{ WarframeCaddy.SelectedRelicTier }})</th>
+			<th width="20%">
+				<select class="form-control" ng-model="WarframeCaddy.SelectedRelic1" ng-click="WarframeCaddy.UpdateRelicSelection()" ng-options="item.type for item in WarframeCaddy.SelectableRelicsList">
+			</select>
+			</th>
+			<th width="20%">
+				<select class="form-control" ng-model="WarframeCaddy.SelectedRelic2" ng-click="WarframeCaddy.UpdateRelicSelection()" ng-options="item.type for item in WarframeCaddy.SelectableRelicsList">
+			</select>
+			</th>
+			<th width="20%">
+				<select class="form-control" ng-model="WarframeCaddy.SelectedRelic3" ng-click="WarframeCaddy.UpdateRelicSelection()" ng-options="item.type for item in WarframeCaddy.SelectableRelicsList">
+			</select>
+			</th>
+			<th width="20%">
+				<select class="form-control" ng-model="WarframeCaddy.SelectedRelic4" ng-click="WarframeCaddy.UpdateRelicSelection()" ng-options="item.type for item in WarframeCaddy.SelectableRelicsList">
+			</select>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Common</th>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic1.common">
+						<span class="common-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic2.common">
+						<span class="common-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic3.common">
+						<span class="common-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic4.common">
+						<span class="common-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th>Uncommon</th>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic1.uncommon">
+						<span class="uncommon-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic2.uncommon">
+						<span class="uncommon-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic3.uncommon">
+						<span class="uncommon-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic4.uncommon">
+						<span class="uncommon-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th>Rare</th>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic1.rare">
+						<span class="rare-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic2.rare">
+						<span class="rare-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic3.rare">
+						<span class="rare-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in WarframeCaddy.SelectedRelic4.rare">
+						<span class="rare-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>All Rewards</h4>
+
+<ul>
+	<li ng-repeat="reward in WarframeCaddy.SelectedRelicRewards">
+		<span class="common-item" ng-hide="reward.type != 'common'" ng-cloak>{{ reward.reward }}</span>
+		<span class="uncommon-item" ng-hide="reward.type != 'uncommon'" ng-cloak>{{ reward.reward }}</span>
+		<span class="rare-item" ng-hide="reward.type != 'rare'" ng-cloak>{{ reward.reward }}</span>
+	</li>
+</ul>
+
+<script>
+	// WarframeCaddy.SelectRelicTier('Lith');
+</script>

@@ -1,0 +1,75 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<span class="navbar-brand">
+				Void Relics
+			</span>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li>
+					<button class="btn btn-success" ng-click="WarframeCaddy.PutItemUsage()" ng-show="WarframeCaddy.ItemUsageDirty" ng-cloak>
+						Save
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<table id="relics_list" class="table item-list-table">
+	<thead>
+		<tr>
+			<th ng-show="Member.member_data">Owned</th>
+			<th>Name</th>
+			<th>Common</th>
+			<th>Uncommon</th>
+			<th>Rare</th>
+			<th ng-show="Member.member_data">Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in WarframeCaddy.VoidRelicsList">
+			<td ng-show="Member.member_data">
+				<table class="flat-table" width="100%">
+					<tr>
+						<td nowrap="true">
+							<a href="#" class="btn-xs inline-button-less hover-link" ng-click="WarframeCaddy.ChangeItemUsage_ItemCount(item.name, -1)">
+								<span class="glyphicon glyphicon-minus"></span>
+							</a>
+							<a href="#" class="btn-xs inline-button-more hover-link" ng-click="WarframeCaddy.ChangeItemUsage_ItemCount(item.name, 1)">
+								<span class="glyphicon glyphicon-plus"></span>
+							</a>
+						</td>
+						<td width="100%" style="text-align:center">
+							<span class="emphasis-text">{{ WarframeCaddy.ItemUsage.items[item.name].item_owned }}</span>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>{{ item.relic_name }}</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in item.common">
+						<span class="common-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in item.uncommon">
+						<span class="uncommon-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li ng-repeat="drop in item.rare">
+						<span class="rare-item">{{ drop }}</span>
+					</li>
+				</ul>
+			</td>
+			<td ng-show="Member.member_data">{{ WarframeCaddy.ItemUsage.items[item.name].notes }}</td>
+		</tr>
+	</tbody>
+</table>
